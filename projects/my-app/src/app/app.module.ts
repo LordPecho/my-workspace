@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JSON_SERVICES_API } from './app-demo/json-placeholder-demo/services/index.service';
 
 // TRANSLATE
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -28,7 +29,7 @@ import { JsonLayoutModule } from './app-demo/json-placeholder-demo/modules/dashb
     // ALWAYS LAST!
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [JSON_SERVICES_API],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
