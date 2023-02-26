@@ -1,0 +1,111 @@
+mat-sidenav{
+  background-color:#27292B;
+}
+mat-sidenav div{
+  margin: 40px
+}
+.nav-bar{
+  background-color: #27292b;
+}
+.nav-menu-container{
+  position: absolute;
+  right: 5px;
+}
+.nav-bar-menu{
+  color: #3F51B5;
+}
+.nav-bar-logo:hover{
+ cursor: pointer;
+}
+.nav-bar-logo{
+  color: #3F51B5;
+}
+
+.side-menu-position{
+  margin: 10px;
+  width: 80%;
+}
+.matMenu-item{
+  color: #3F51B5;
+}
+.drawer-items{
+  background-color: #27292b;
+}
+
+.sidenav-content-items{
+  height: 100vh;
+}
+
+select {
+
+  /* styling */
+  background-color: white;
+  border: thin solid #3F51B5;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height:  15px;
+  padding: 0.5em 3.5em 0.5em 1em;
+  /* reset */
+
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 30px;
+}
+
+
+/* arrows */
+
+select.classic {
+  background-image:
+    linear-gradient(45deg, transparent 50%, blue 50%),
+    linear-gradient(135deg, blue 50%, transparent 50%),
+    linear-gradient(to right, #3F51B5, #3F51B5);
+  background-position:
+    calc(100% - 15px),
+    calc(100% - 10px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+select.classic:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+  background-position:
+    calc(100% - 10px) ,
+    calc(100% - 15px) ,
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.logout-button-container{
+  position: absolute;
+  bottom: 5px;
+
+}
+
+.logout-button-container button{
+  width: 105px;
+}

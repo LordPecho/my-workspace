@@ -1,0 +1,101 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    position="end"
+    fxLayout="column"
+    fxLayoutAlign="space-around center"
+  >
+    <div>
+      <button
+        class="side-menu-position"
+        mat-raised-button
+        color="primary"
+        (click)="navigate(['/', 'profile'])"
+      >
+        <mat-icon>person</mat-icon> items.details.profile
+      </button>
+    </div>
+    <!-- <div (click)="$event.stopPropagation()">
+    <select
+    class="classic side-menu-position"
+    #langSelected
+    (change)="translate.use(langSelected.value)"
+    >
+    <option
+    *ngFor="let lang of translate.getLangs()"
+    [value]="lang"
+    [selected]="lang === translate.currentLang"
+    >
+    {{ lang }}
+  </option>
+</select>
+</div> -->
+    <div>
+      <button
+        mat-raised-button
+        color="primary"
+        class="side-menu-position"
+        (click)="navigate(['/', 'settings'])"
+      >
+        <mat-icon>settings</mat-icon> items.details.settings
+      </button>
+    </div>
+    <div class="logout-button-container">
+      <button
+        *ngIf="logout == 'true'"
+        mat-raised-button
+        color="primary"
+        class="side-menu-position"
+      >
+        items.details.logout
+      </button>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="sidenav-content-items">
+      <mat-toolbar
+        class="nav-bar"
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+      >
+        <div fxFlex="35">
+          <span (click)="navigate(['/'])" class="nav-bar-logo">
+            main-nav.my-apps
+          </span>
+        </div>
+
+        <div fxFlex="60">
+          <button mat-mini-fab color="primary" [matMenuTriggerFor]="menu">
+            <mat-icon> assignment </mat-icon>
+          </button>
+        </div>
+        <button
+          mat-icon-button
+          aria-label="Menu"
+          (click)="sidenav.open()"
+          color="primary"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-menu #menu="matMenu">
+  <span *ngFor="let item of menuList">
+    <button
+      class="matMenu-item"
+      mat-menu-item
+      (click)="navigate(item.routerLink)"
+    >
+      <mat-icon color="primary">
+        {{ item.icon }}
+      </mat-icon>
+      {{ item.title }}
+    </button>
+  </span>
+</mat-menu>
+
+

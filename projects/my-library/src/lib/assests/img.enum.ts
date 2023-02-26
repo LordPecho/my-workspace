@@ -1,0 +1,4 @@
+// API
+
+export enum NGXImgENUM {
+}
