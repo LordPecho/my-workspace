@@ -28,43 +28,28 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     ]),
   ],
 })
-export class JsonUserMatTableComponent implements OnInit, OnDestroy {
+export class JsonUserMatTableComponent implements OnInit {
 
   //VAR
-  public list: JSONUser[] = [];
-  dataSource: MatTableDataSource<JSONUser> = new MatTableDataSource;
+  @Input() public data: JSONUser[] = [];
+  @Input() dataSource: MatTableDataSource<JSONUser> = new MatTableDataSource;
   columnsToDisplay = ['id', 'name', 'username', 'email'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
   expandedElement: JSONUser | null;
 
-
-  //SUBSCRIPTION
-  private subcription: Subscription = new Subscription()
-
   constructor(
-    private userService: JsonUserService,
     private router: Router,
   ) { }
 
   ngOnInit(): void {
-    localStorage.setItem('lastRoute', this.router.url);
-
-    this.subcription.add(this.userService.getUsers()
-    .subscribe((userDomList: JSONUser[])=>{
-        this.list = userDomList;
-        this.dataSource = new MatTableDataSource(userDomList);
-
-    }));
 
   }
 
   public navigate(item: JSONUser){
-   throw console.error('NOT IMPLIMENTED');
+   this.router.navigate(item.routerLink);
 
   }
 
-  ngOnDestroy(): void {
-  this.subcription.unsubscribe();
-  }
+
 
 }

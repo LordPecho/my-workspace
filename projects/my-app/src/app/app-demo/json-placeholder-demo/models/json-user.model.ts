@@ -35,4 +35,8 @@ export class JSONUser implements IJSONUser, IEntityBaseDOM<IJSONUser> {
   patchValues?(data: IJSONUser): void {
     updateObject(this, data);
   }
+  public get routerLink(): string[]{
+    return ['/', 'JSON', 'users', this.id.toString()] as string[];
+  }
+
 }
