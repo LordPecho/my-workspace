@@ -1,7 +1,16 @@
+// ANGULAR
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+// API
+import { JsonUserCrudPageComponent } from './json-user-crud-page.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: JsonUserCrudPageComponent,
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

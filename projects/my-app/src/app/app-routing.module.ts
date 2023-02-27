@@ -23,7 +23,11 @@ const routes: Routes = [
           {
             path: 'users',
             loadChildren: ()=> import('./app-demo/json-placeholder-demo/modules/users/json-user-overview-page/json-user-overview-page.module').then(m=> m.JsonUserOverviewPageModule),
-          }
+          },
+          {
+            path: 'users/:userId',
+            loadChildren: ()=> import('./app-demo/json-placeholder-demo/modules/users/json-user-crud-page/json-user-crud-page.module').then(m=> m.JsonUserCrudPageModule),
+          },
         ]
       }
     ]
