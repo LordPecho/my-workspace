@@ -1,6 +1,6 @@
 // API
 
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+import { IEntityBaseDOM, updateObject } from 'my-library';
 
 export interface IJSONPhoto {
   albumId: number;
@@ -10,7 +10,7 @@ export interface IJSONPhoto {
   thumbnailUrl: string;
 }
 
-export class JSONPhoto implements IJSONPhoto, INGXEntityBaseDOM<IJSONPhoto> {
+export class JSONPhoto implements IJSONPhoto, IEntityBaseDOM<IJSONPhoto> {
   albumId: number;
   id: number;
   title: string;

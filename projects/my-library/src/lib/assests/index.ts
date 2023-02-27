@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-core-lib
+ * Public API Surface of my-library
  */
 
 // ASSETS

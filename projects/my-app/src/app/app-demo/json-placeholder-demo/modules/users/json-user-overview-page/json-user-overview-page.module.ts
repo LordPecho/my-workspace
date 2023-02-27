@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { JsonUserOverviewPageRoutingModule } from './json-user-overview-page-routing.module';
 import { JsonUserOverviewPageComponent } from './json-user-overview-page.component';
+import { JsonUserMatTableModule } from '../json-user-mat-table/json-user-mat-table.module';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { JsonUserOverviewPageComponent } from './json-user-overview-page.compone
   ],
   imports: [
     CommonModule,
+    JsonUserMatTableModule,
     JsonUserOverviewPageRoutingModule
   ]
 })

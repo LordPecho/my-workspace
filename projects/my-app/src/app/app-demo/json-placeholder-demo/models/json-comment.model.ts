@@ -1,6 +1,6 @@
 // API
 
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+import { IEntityBaseDOM, updateObject } from 'my-library';
 
 export interface IJSONComment {
   postId: number;
@@ -10,7 +10,7 @@ export interface IJSONComment {
   body: string;
 }
 
-export class JSONComment implements IJSONComment, INGXEntityBaseDOM<IJSONComment> {
+export class JSONComment implements IJSONComment, IEntityBaseDOM<IJSONComment> {
   postId: number;
   id: number;
   name: string;

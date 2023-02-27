@@ -1,5 +1,6 @@
 // API
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+
+import { IEntityBaseDOM, updateObject } from 'my-library';
 import { INGXGithubUser } from './ngx-github-user.model';
 
 export interface INGXGithubProject {
@@ -19,7 +20,7 @@ export interface INGXGithubProject {
 }
 
 export class NGXGithubProject
-  implements INGXGithubProject, INGXEntityBaseDOM<INGXGithubProject>
+  implements INGXGithubProject, IEntityBaseDOM<INGXGithubProject>
 {
   owner_url: string;
   url: string;

@@ -1,6 +1,6 @@
 // API
 
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+import { IEntityBaseDOM, updateObject } from 'my-library';
 
 export interface IJSONTodo {
   userId: number;
@@ -9,7 +9,7 @@ export interface IJSONTodo {
   completed: boolean;
 }
 
-export class JSONTodo implements IJSONTodo, INGXEntityBaseDOM<IJSONTodo> {
+export class JSONTodo implements IJSONTodo, IEntityBaseDOM<IJSONTodo> {
   userId: number;
   id: number;
   title: string;

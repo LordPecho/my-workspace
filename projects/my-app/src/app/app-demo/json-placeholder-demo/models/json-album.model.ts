@@ -1,6 +1,6 @@
 // API
 
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+import { IEntityBaseDOM, updateObject } from 'my-library';
 
 export interface IJSONAlbum {
   userId: string;
@@ -8,7 +8,7 @@ export interface IJSONAlbum {
   title: string;
 }
 
-export class JSONAlbum implements IJSONAlbum, INGXEntityBaseDOM<IJSONAlbum> {
+export class JSONAlbum implements IJSONAlbum, IEntityBaseDOM<IJSONAlbum> {
   userId: string;
   id: string;
 

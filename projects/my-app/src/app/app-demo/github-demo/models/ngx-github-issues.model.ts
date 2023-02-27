@@ -1,5 +1,6 @@
 // API
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+
+import { IEntityBaseDOM, updateObject } from 'projects/my-library/src/public-api';
 import { INGXGithubLabel } from './ngx-github-labels.model';
 import { INGXGithubMilestone } from './ngx-github-milestone.model';
 import { INGXGithubUser } from './ngx-github-user.model';
@@ -40,7 +41,7 @@ export interface INGXGithubIssues {
 }
 
 export class NGXGithubIssues
-  implements INGXGithubIssues, INGXEntityBaseDOM<INGXGithubIssues>
+  implements INGXGithubIssues, IEntityBaseDOM<INGXGithubIssues>
 {
   id: number;
   node_id: string;

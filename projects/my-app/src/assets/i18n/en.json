@@ -1,0 +1,68 @@
+{
+  "main-nav": {
+    "my-apps": "My Apps",
+
+    "button-1": {
+      "item":"Item",
+      "tempText":"Just a temp placeholder",
+      "json-site": "Site"
+    }
+  },
+  "items": {
+    "title":{
+      "home": "Home",
+      "users": "Users",
+      "posts": "Posts",
+      "albums": "Albums",
+      "comments": "Comments",
+      "my-projects": "My projects"
+    },
+    "details": {
+      "username": "Username",
+      "name": "Name",
+      "email": "Email",
+      "id": "Id",
+      "body": "Body",
+      "phone-number": "Phone number",
+      "website": "Website",
+      "city": "City",
+      "zip-code": "Zip code",
+      "street-name": "Street name",
+      "company-name": "Company name",
+      "catchphrase": "Catchphrase",
+      "comment": "Comment",
+      "title":"Title",
+      "search": "Search",
+      "settings": "Settings",
+      "profile": "Profile",
+      "calendar": "Calendar",
+      "calendar-view":"Calendar view",
+      "slide-menu": "Slide menu",
+      "login": "Login",
+      "logout": "Logout",
+      "password": "Password"
+    }
+  },
+  "form-page": {
+    "details-page": "Details Page",
+    "edit": "Edit",
+    "edit-details-page": "Edit Details Page",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "user-general-details": "User general details",
+    "user-address-details": "User address details",
+    "user-company-details": "User company details"
+  },
+  "overview-page":{
+    "posts":{
+      "posts-overview-page": "Posts Overview Page",
+      "load-posts": "Load Posts"
+   }
+  },
+  "temp-settings-text": {
+    "after-enable": "After changing the settings reload the page."
+  }
+
+}
+

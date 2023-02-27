@@ -1,5 +1,5 @@
 // API
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+import { IEntityBaseDOM, updateObject } from 'my-library';
 import { INGXGithubBase } from './ngx-github-base.model';
 import { INGXGithubHead } from './ngx-github-head.model';
 import { INGXGithubLabel } from './ngx-github-labels.model';
@@ -48,7 +48,7 @@ export interface INGXGithubPullRequest {
 }
 
 export class NGXGithubPullRequests
-  implements INGXGithubPullRequest, INGXEntityBaseDOM<INGXGithubPullRequest>
+  implements INGXGithubPullRequest, IEntityBaseDOM<INGXGithubPullRequest>
 {
   url: string;
   id: number;

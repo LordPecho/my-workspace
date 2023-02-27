@@ -1,6 +1,6 @@
 // API
 
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+import { IEntityBaseDOM, updateObject } from 'my-library';
 import { IJSONAddress } from './json-address.model';
 import { IJSONCompany } from './json-company.model';
 
@@ -15,7 +15,7 @@ export interface IJSONUser {
   company: IJSONCompany;
 }
 
-export class JSONUser implements IJSONUser, INGXEntityBaseDOM<IJSONUser> {
+export class JSONUser implements IJSONUser, IEntityBaseDOM<IJSONUser> {
   id: number;
   name: string;
   username: string;

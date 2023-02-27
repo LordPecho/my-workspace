@@ -1,6 +1,6 @@
 // API
 
-import { INGXEntityBaseDOM, updateObject } from 'ngx-core-lib';
+import { IEntityBaseDOM, updateObject } from 'my-library';
 
 export interface IJSONPost {
   userId: number;
@@ -9,7 +9,7 @@ export interface IJSONPost {
   body: string;
 }
 
-export class JSONPost implements IJSONPost, INGXEntityBaseDOM<IJSONPost> {
+export class JSONPost implements IJSONPost, IEntityBaseDOM<IJSONPost> {
   userId: number;
   id: number;
   title: string;

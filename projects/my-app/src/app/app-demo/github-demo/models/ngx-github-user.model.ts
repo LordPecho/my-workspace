@@ -1,5 +1,3 @@
-// API
-import { updateObject } from "ngx-core-lib";
 
 export interface INGXGithubUser {
   login: string;

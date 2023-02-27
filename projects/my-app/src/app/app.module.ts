@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 //HTTP
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 // API
 import { AppRoutingModule } from './app-routing.module';
@@ -13,10 +13,15 @@ import { JSON_SERVICES_API } from './app-demo/json-placeholder-demo/services/ind
 
 // TRANSLATE
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+// MODULES
 import { LayoutModule } from './modules/layout/layout.module';
 import { JsonLayoutModule } from './app-demo/json-placeholder-demo/modules/dashboards/json-layout/json-layout.module';
 
-
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +31,14 @@ import { JsonLayoutModule } from './app-demo/json-placeholder-demo/modules/dashb
     BrowserAnimationsModule,
     LayoutModule,
     JsonLayoutModule,
+        //TRANSLATE
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: (createTranslateLoader),
+            deps: [HttpClient],
+          }
+        }),
     // ALWAYS LAST!
     AppRoutingModule,
   ],

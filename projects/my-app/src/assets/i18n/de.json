@@ -1,0 +1,66 @@
+{
+  "main-nav": {
+    "my-apps": "Meine Apps",
+
+    "button-1": {
+      "item":"Gegenstand",
+      "tempText":"Nur ein temp Platzhalter",
+      "json-site": "Seite"
+    }
+  },
+  "items": {
+    "title":{
+      "home": "Heim",
+      "users": "Benutzer",
+      "posts": "Beiträge",
+      "albums": "Alben",
+      "comments": "Kommentare",
+      "my-projects": "Meine Projekte"
+    },
+    "details":{
+      "username": "Nutzername",
+      "name": "Name",
+      "email": "Email",
+      "id": "Id",
+      "body": "Körper",
+      "phone-number": "Telefonnummer",
+      "website": "Webseite",
+      "city": "Stadt",
+      "zip-code": "Postleitzahl",
+      "street-name": "Straßenname",
+      "company-name": "Name der Firma",
+      "catchphrase": "Schlagwort",
+      "comment": "Kommentar",
+      "title":"Titel",
+      "search": "Suche",
+      "settings": "Einstellungen",
+      "profile": "Profil",
+      "calendar": "Kalender",
+      "calendar-view":"Kalenderansicht",
+      "slide-menu": "Folienmenü",
+      "login": "Anmeldung",
+      "logout": "Ausloggen",
+      "password": "Passwort"
+    }
+  },
+  "form-page": {
+    "details-page": "Detailseite",
+    "edit": "Bearbeiten",
+    "edit-details-page": "Detailseite bearbeiten",
+    "back": "Zurück",
+    "save": "Speichern",
+    "cancel": "Absagen",
+    "user-general-details": "Allgemeine Benutzerdaten",
+    "user-address-details": "Details zur Benutzeradresse",
+    "user-company-details": "Angaben zum Benutzerunternehmen"
+  },
+  "overview-page":{
+    "posts":{
+      "posts-overview-page": "Beitragsübersichtsseite",
+      "load-posts": "Beiträge laden"
+   }
+  },
+  "temp-settings-text": {
+    "after-enable": "Nach dem Ändern der Einstellungen laden Sie die Seite neu."
+  }
+  }
