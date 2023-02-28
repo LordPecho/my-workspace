@@ -1,1 +1,14 @@
-<p>json-user-todos works!</p>
+<div class="json-todo-manager-page">
+  <span
+    *ngFor="let item of data"
+    fxLayout="column"
+    fxLayoutAlign="space-around center"
+  >
+    <div>
+      <app-json-todo-cdk-drop-list
+        [todo]="item.todo"
+        [done]="item.done"
+      ></app-json-todo-cdk-drop-list>
+    </div>
+  </span>
+</div>

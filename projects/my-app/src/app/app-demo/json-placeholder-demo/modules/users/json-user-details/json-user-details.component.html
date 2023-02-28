@@ -1,1 +1,88 @@
-<p>json-user-details works!</p>
+<div class="json-user-details">
+  <div fxFlex="100" fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="center">
+    <span fxFlex="98">
+      <div class="container">
+        <mat-card
+          class="splash mat-elevation-z4 user-details-container"
+          fxLayout="column"
+          fxLayout.gt-sm="row"
+          fxLayoutAlign="start center"
+          fxLayoutAlign.gt-sm="space-between"
+        >
+          <div fxFlex="60" class="left" fxLayout="row">
+            <img fxFlex="150px" class="avatar" [attr.src]="avatarDisplay" />
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <div>
+                <div class="user-name">{{ user?.name }}</div>
+                <div
+                  class="contact"
+                  fxLayout="column"
+                  fxLayoutAlign="start"
+                  fxLayoutGap="6px"
+                >
+                  <span class="name"
+                    >{{
+                      ngxTranslateKeyENUM.COMMON_LABEL_CONTACTS | translate
+                    }}:
+                  </span>
+                  <div>
+                    <mat-icon class="icon">{{ ngxIconCodeENUM.MAIL }}</mat-icon>
+                    <span>{{ user?.email }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            fxFlex="40"
+            class="right"
+            fxLayout="column"
+            fxLayoutAlign="space-between"
+          >
+            <div class="info" fxLayout="row">
+              <div class="names">
+                <div class="name">
+                  <mat-icon class="icon">{{
+                    ngxIconCodeENUM.LOCATION_CITY
+                  }}</mat-icon>
+                  {{ ngxTranslateKeyENUM.COMMON_LABEL_ADDRESS | translate }}:
+                </div>
+                <div class="name">
+                  <mat-icon class="icon">{{ ngxIconCodeENUM.PHONE }}</mat-icon>
+                  {{ ngxTranslateKeyENUM.COMMON_LABEL_PHONE | translate }}:
+                </div>
+              </div>
+              <div class="values">
+                <div class="value">
+                  {{ user?.address.street }}, {{ user?.address.city }},
+                  {{ user?.address.zipcode }}
+                </div>
+                <div class="value">{{ user?.phone }}</div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+        <div>
+          <mat-tab-group class="profile-tabs clean-tabs">
+            <mat-tab
+              label="{{ ngxTranslateKeyENUM.COMMON_LABEL_ALBUM | translate }}"
+            >
+              <!-- <json-user-albums
+                [userId]="userId"
+                [user]="user"
+              ></json-user-albums> -->
+            </mat-tab>
+            <mat-tab
+              label="{{ ngxTranslateKeyENUM.COMMON_LABEL_TODOS | translate }}"
+            >
+              <app-json-user-todos
+                [userId]="userId"
+                [user]="user"
+              ></app-json-user-todos>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>

@@ -1,2 +1,12 @@
-<app-json-user-details></app-json-user-details>
-<app-json-user-form-group></app-json-user-form-group>
+<!-- USER CURD PAGE/SANDBOX -->
+
+<div class="ngx-page">
+  <div>
+    <app-json-user-details [userId]="userId" [user]="data"> </app-json-user-details>
+  </div>
+  <div>
+    <app-json-user-form-group
+      [dataFormGroup]="dataFormGroup"
+    ></app-json-user-form-group>
+  </div>
+</div>

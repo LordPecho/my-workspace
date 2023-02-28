@@ -26,17 +26,25 @@ export class JsonUserService {
 
     //GET ALL
     public getUsers(): Observable<JSONUser[]>{
-      return this.httpClient.get<JSONUser[]>(environment.jsonPlaceholder.apiUrl + 'users')
+      return this.httpClient
+      .get<JSONUser[]>(environment.jsonPlaceholder.apiUrl + 'users')
       .pipe(
-        map((userDtoList: IJSONUser[]) => {
-          const jsonUserList: JSONUser[] = [];
-          userDtoList.forEach((userDto: IJSONUser) => {
-            jsonUserList.push(new JSONUser(userDto));
+        map((data: IJSONUser[]) => {
+          const sanitizedData: JSONUser[] = [];
+          data.forEach((item: IJSONUser) => {
+            sanitizedData.push(new JSONUser(item));
           });
-          return jsonUserList;
+          return sanitizedData;
         })
       );
     }
+
+    // GET USER BY ID
+  public getUser(userId: string): Observable<IJSONUser> {
+    return this.httpClient.get<IJSONUser>(
+      environment.jsonPlaceholder.apiUrl + 'users' + '/' + userId
+    );
+  }
 
     public dataTableColumns(): IDataTableColumn[] {
       return [
