@@ -10,3 +10,6 @@ export * from './lib/models-core/index'
 
 // COMMON-JS
 export * from './lib/common-js/index'
+
+// COMPONENTS-WEB
+export * from './lib/components-web/index'
