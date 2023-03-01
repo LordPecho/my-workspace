@@ -1,0 +1,9 @@
+<mat-icon [matMenuTriggerFor]="menu">{{menuIconCode}}</mat-icon>
+<mat-menu #menu="matMenu">
+  <div mat-menu-item *ngFor="let columnControl of columnControls" role="menuitemcheckbox" (click)="$event.stopPropagation()" [disableRipple]="true">
+    <span fxFlex (click)="columnControl.visible = !columnControl.visible">
+      {{ getColumnHeaderLableI18nKey(columnControl.property) | translate }}
+    </span>
+    <mat-checkbox [labelPosition]="'before'" [checked]="columnControl.visible" (change)="columnControl.visible = !columnControl.visible"></mat-checkbox>
+  </div>
+</mat-menu>

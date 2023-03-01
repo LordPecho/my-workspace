@@ -18,16 +18,20 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: ()=> import('./app-demo/json-placeholder-demo/modules/dashboards/json-home-page/json-home-page.module').then(m=> m.JsonHomePageModule),
+            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/dashboards/json-home-page/json-home-page.module').then(m => m.JsonHomePageModule),
           },
           {
             path: 'users',
-            loadChildren: ()=> import('./app-demo/json-placeholder-demo/modules/users/json-user-overview-page/json-user-overview-page.module').then(m=> m.JsonUserOverviewPageModule),
+            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/users/json-user-overview-page/json-user-overview-page.module').then(m => m.JsonUserOverviewPageModule),
           },
           {
             path: 'users/:userId',
-            loadChildren: ()=> import('./app-demo/json-placeholder-demo/modules/users/json-user-crud-page/json-user-crud-page.module').then(m=> m.JsonUserCrudPageModule),
+            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/users/json-user-crud-page/json-user-crud-page.module').then(m => m.JsonUserCrudPageModule),
           },
+          {
+            path:'albums',
+            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/albums/json-album-crud-page/json-album-crud-page.module').then(m => m.JsonAlbumCrudPageModule),
+          }
         ]
       }
     ]
