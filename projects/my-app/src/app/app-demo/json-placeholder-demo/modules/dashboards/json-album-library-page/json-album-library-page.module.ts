@@ -14,6 +14,8 @@ import { TranslateModule } from '@ngx-translate/core';
 // MODULE
 import { FilterInputFormControlModule } from 'my-library';
 import { JsonAlbumMatTableModule } from '../../albums/json-album-mat-table/json-album-mat-table.module';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { JsonAlbumMatTableModule } from '../../albums/json-album-mat-table/json-
     TranslateModule,
     FilterInputFormControlModule,
     JsonAlbumMatTableModule,
+    MatSelectModule,
+    MatFormFieldModule,
     JsonAlbumLibraryPageRoutingModule
   ]
 })

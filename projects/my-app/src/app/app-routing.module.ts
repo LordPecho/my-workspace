@@ -30,7 +30,7 @@ const routes: Routes = [
           },
           {
             path:'albums',
-            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/albums/json-album-crud-page/json-album-crud-page.module').then(m => m.JsonAlbumCrudPageModule),
+            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/dashboards/json-album-library-page/json-album-library-page.module').then(m => m.JsonAlbumLibraryPageModule),
           }
         ]
       }

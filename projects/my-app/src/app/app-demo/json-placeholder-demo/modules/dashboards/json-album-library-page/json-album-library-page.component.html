@@ -1,1 +1,30 @@
-<p>json-album-library-page works!</p>
+<div class="ngx-page">
+  <div>
+    <form [formGroup]="queryParamsFormGroup">
+      <div fxFlex="100" fxLayout="row" fxLayoutGap="16px">
+        <lib-filter-input-form-control
+          fxFlex="80"
+          [filterFormControl]="filterFormControl"
+        ></lib-filter-input-form-control>
+        <mat-form-field fxFlex>
+          <mat-label>{{ "user.ui.list" | translate }}</mat-label>
+          <mat-select formControlName="userId">
+            <mat-option *ngFor="let user of users" [value]="user.id">
+              {{ user.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div>
+    <app-json-album-mat-table
+      #jsonAlbumMatTable
+      (eventEmitter)="childEventEmitter($event)"
+      [filterFormControl]="filterFormControl"
+      [data]="data"
+      [dataSource]="dataSource"
+      [tableColumns]="tableColumns"
+    ></app-json-album-mat-table>
+  </div>
+</div>
