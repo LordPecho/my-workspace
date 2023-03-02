@@ -1,1 +1,12 @@
-<p>filter-input-form-control works!</p>
+<mat-form-field class="ngx-filter-input-form-field" floatPlaceholder="never" fxFlex [appearance]="appearance">
+  <mat-label>{{ label | translate }}</mat-label>
+  <mat-icon class="ngx-filter-input-prefix-icon" matPrefix>{{prefixIconCode}}</mat-icon>
+  <input [formControl]="filterFormControl" matInput [placeholder]="placeholder | translate" autocomplete="off">
+  <mat-icon
+      class="ngx-filter-input-suffix-icon"
+      matSuffix
+      (click)="clearSearchInput()">
+      {{suffixIconCode}}
+  </mat-icon>
+  <!-- <mat-hint *ngIf="isCharTriggerLimited">{{'UI.MIN_LENGTH_MESSAGE'}}</mat-hint> -->
+</mat-form-field>
