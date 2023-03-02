@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+// ANGULAR
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-json-photo-gallery',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./json-photo-gallery.component.scss']
 })
 export class JsonPhotoGalleryComponent {
+
+  @Input() public images: {
+    title: string;
+    src: string;
+  }[] = [];
 
 }

@@ -28,9 +28,18 @@ const routes: Routes = [
             path: 'users/:userId',
             loadChildren: () => import('./app-demo/json-placeholder-demo/modules/users/json-user-crud-page/json-user-crud-page.module').then(m => m.JsonUserCrudPageModule),
           },
+          // TEMP ROUTING BUG FIX
+          {
+            path: 'users/:userId/:albumId',
+            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/albums/json-album-crud-page/json-album-crud-page.module').then(m => m.JsonAlbumCrudPageModule),
+          },
           {
             path:'albums',
             loadChildren: () => import('./app-demo/json-placeholder-demo/modules/dashboards/json-album-library-page/json-album-library-page.module').then(m => m.JsonAlbumLibraryPageModule),
+          },
+          {
+            path:'albums/:albumId',
+            loadChildren: () => import('./app-demo/json-placeholder-demo/modules/albums/json-album-crud-page/json-album-crud-page.module').then(m => m.JsonAlbumCrudPageModule),
           }
         ]
       }

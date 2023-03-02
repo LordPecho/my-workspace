@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 
 // MODULE
+import { JsonUserAlbumModule } from '../json-user-album/json-user-album.module';
 
 
 //#lib
@@ -38,7 +39,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MatChipsModule,
     FlexLayoutModule,
     TranslateModule,
-    // JsonUserAlbumsModule,
+    JsonUserAlbumModule,
     // JsonCompanyDetailsModule,
     JsonUserTodosModule,
     JsonUserDetailsRoutingModule

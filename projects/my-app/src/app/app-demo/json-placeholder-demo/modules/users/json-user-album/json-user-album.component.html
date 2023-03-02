@@ -1,0 +1,21 @@
+<div>
+  <div>
+    <form [formGroup]="queryParamsFormGroup">
+      <div fxFlex="100" fxLayout="row" fxLayoutGap="16px">
+        <lib-filter-input-form-control
+          fxFlex="100"
+          [filterFormControl]="filterFormControl"
+        ></lib-filter-input-form-control>
+      </div>
+    </form>
+  </div>
+  <div>
+    <app-json-album-mat-table
+      #jsonAlbumMatTable
+      [filterFormControl]="filterFormControl"
+      [data]="data"
+      [dataSource]="dataSource"
+      [tableColumns]="tableColumns"
+    ></app-json-album-mat-table>
+  </div>
+</div>
