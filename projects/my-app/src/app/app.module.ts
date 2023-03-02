@@ -18,13 +18,14 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // MODULES
 import { LayoutModule } from './modules/layout/layout.module';
 import { JsonLayoutModule } from './app-demo/json-placeholder-demo/modules/dashboards/json-layout/json-layout.module';
+import { JsonCommentComponent } from './app-demo/json-placeholder-demo/modules/comments/json-comment/json-comment.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, JsonCommentComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
