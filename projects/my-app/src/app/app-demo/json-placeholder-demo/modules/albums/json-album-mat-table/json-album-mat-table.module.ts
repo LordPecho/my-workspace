@@ -25,6 +25,9 @@ import { TableColumnControlsMenuModule } from 'my-library';
   declarations: [
     JsonAlbumMatTableComponent
   ],
+  exports:[
+    JsonAlbumMatTableComponent
+  ],
   imports: [
     CommonModule,
     FlexLayoutModule,
