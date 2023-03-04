@@ -1,28 +1,38 @@
 // ANGULAR
-import { Injectable } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable, Injector } from '@angular/core';
+
+// ENV
+import { environment } from 'projects/my-app/src/enviroments/environment';
+
+// RxJS
+import { map, Observable } from 'rxjs';
+
+// API
+import { setHttpParams } from 'my-library';
+import { IJSONPost, JSONPost } from '../models/json-post.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class JsonPostService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient, private injector: Injector) { }
 
-  public formGroup(): FormGroup {
-    return new FormBuilder().group({
-      street: [null],
-      suite: [null],
-      city: [null],
-      zipcode: [null],
-      geo: this.geoFormGroup(),
-    });
+  public getPosts(queryParams?: any): Observable<JSONPost[]> {
+    const params: HttpParams = setHttpParams(queryParams);
+    return this.httpClient
+      .get<JSONPost[]>(environment.jsonPlaceholder.apiUrl + 'posts', { params })
+      .pipe(
+        map((data: IJSONPost[]) => {
+          const sanitizedData: JSONPost[] = [];
+          data.forEach((item: IJSONPost) => {
+            sanitizedData.push(new JSONPost(item));
+          });
+          return sanitizedData;
+        })
+      );
   }
 
-  private geoFormGroup() {
-    return new FormBuilder().group({
-      lat: [null],
-      lng: [null],
-    });
-  }
 }
