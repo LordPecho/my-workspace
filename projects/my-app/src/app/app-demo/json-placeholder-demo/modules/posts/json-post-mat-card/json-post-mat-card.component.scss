@@ -1,0 +1,33 @@
+mat-card.json-post-card{
+  margin-bottom: 20px;
+  min-width: 270px;
+}
+.comment-card{
+  min-width: 302px;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.card-header-container,
+.card-content-container{
+  border-bottom: 1px solid gray;
+  margin: 10px;
+}
+.card-content{
+  padding-bottom: 10px;
+}
+.user-avatar-container,
+.user-title,
+.user-subtitle{
+  cursor: pointer;
+}
+.like-button,
+.comment-button{
+  color: gray
+}
+.active{
+  color: blue;
+}
+

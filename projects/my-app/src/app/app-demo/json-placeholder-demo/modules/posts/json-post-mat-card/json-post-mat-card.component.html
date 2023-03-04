@@ -1,1 +1,45 @@
-<p>json-post-mat-card works!</p>
+<mat-card class="mat-elevation-z4 json-post-card">
+  <mat-card-header class="card-header-container">
+    <div (click)="navigate(user)" mat-card-avatar class="user-avatar-container">
+      <img class="avatar" alt="User avatar" [attr.src]="avatarDisplay" />
+    </div>
+    <mat-card-title class="user-title" (click)="navigate(user)">
+      <h1>
+        {{ user.username }}
+      </h1>
+    </mat-card-title>
+    <mat-card-subtitle class="user-subtitle" (click)="navigate(user)">
+      {{ user.email }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <h2>{{ ngxTranslateKeyENUM.COMMON_LABEL_TITLE | translate }}:</h2>
+  <p>
+    {{ post.title }}
+  </p>
+  <mat-card-content class="card-content-container">
+    <h2>{{ ngxTranslateKeyENUM.COMMON_LABEL_BODY | translate }}:</h2>
+    <p class="card-content">
+      {{ post.body }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions fxLayout="row" fxLayoutAlign="space-evenly center">
+    <button
+      [ngClass]="{ active: isLiked }"
+      class="like-button"
+      mat-button
+      (click)="like()"
+    >
+      <mat-icon>
+        {{ ngxIconCodeENUM.THUMB_UP }}
+      </mat-icon>
+      {{ ngxTranslateKeyENUM.COMMON_LABEL_LIKE | translate }}
+    </button>
+    <button class="comment-button" mat-button (click)="addNewComment(post.id)">
+      <mat-icon>
+        {{ ngxIconCodeENUM.COMMENT }}
+      </mat-icon>
+      {{ ngxTranslateKeyENUM.COMMON_LABEL_COMMENTS | translate }}
+    </button>
+  </mat-card-actions>
+</mat-card>
