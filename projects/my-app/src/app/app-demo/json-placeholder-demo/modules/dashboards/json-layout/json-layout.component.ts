@@ -25,19 +25,9 @@ export class JsonLayoutComponent implements OnInit {
       routerLink: ['/', 'JSON', 'users'],
     },
     {
-      title: 'posts',
-      icon: 'photo',
-      routerLink: ['/', 'JSON', 'posts'],
-    },
-    {
       title: 'albums',
       icon: 'filter',
       routerLink: ['/', 'JSON', 'albums'],
-    },
-    {
-      title: 'comments',
-      icon: 'comment',
-      routerLink: ['/', 'JSON', 'comments'],
     },
   ]
 
