@@ -1,0 +1,27 @@
+<div *ngFor="let item of data">
+  <!-- POSTS -->
+  <div fxLayout="row" fxLayoutAlign="center">
+    <app-json-post-mat-card
+      (eventEmitter)="addPostId($event)"
+      *ngIf="loadPosts(item.post)"
+      fxFlex="40"
+      [user]="item.user"
+      [post]="item.post"
+    >
+    </app-json-post-mat-card>
+  </div>
+  <!-- COMMENTS -->
+  <div
+    fxLayout="row"
+    fxLayoutAlign="center"
+    *ngIf="commentIsSelected(item.post)"
+  >
+    <mat-card fxFlex="40">
+      <app-json-comment-overview
+        class="post-card-comments"
+        [postId]="getPostId(item.post.id)"
+      >
+      </app-json-comment-overview>
+    </mat-card>
+  </div>
+</div>

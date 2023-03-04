@@ -1,0 +1,10 @@
+.user-select{
+  line-height: 1;
+  padding-top: 0.65em;
+}
+::ng-deep lib-ngx-filter-input-form-control{
+  .mat-form-field{
+    line-height: 1;
+    }
+  }
+

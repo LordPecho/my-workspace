@@ -1,1 +1,26 @@
-<p>json-home-page works!</p>
+<div class="ngx-page json-home-page" (scroll)="onScroll($event)">
+  <div>
+    <form [formGroup]="queryParamsFormGroup">
+      <div fxFlex="100" fxLayout="row" fxLayoutGap="16px">
+        <lib-filter-input-form-control
+          fxFlex="80"
+          [filterFormControl]="filterFormControl"
+        ></lib-filter-input-form-control>
+        <mat-form-field class="user-select" fxFlex>
+          <mat-label>{{ "user.ui.list" | translate }}</mat-label>
+          <mat-select formControlName="userId" (valueChange)="isUser()">
+            <mat-option *ngFor="let user of users" [value]="user.id">
+              {{ user.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <!-- POSTS -->
+  <app-json-posts
+    [data]="data"
+    [isUserSelected]="isUserSelected"
+    [loadedPostId]="loadedPostId"
+  ></app-json-posts>
+</div>
