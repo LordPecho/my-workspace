@@ -1,1 +1,34 @@
-<p>json-comments works!</p>
+<mat-card *ngFor="let comment of comments" class="json-comment-card">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <img class="avatar" alt="User avatar" [attr.src]="avatarDisplay" />
+    </div>
+    <mat-card-title>
+      <h3>
+        {{ comment.name }}
+      </h3>
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ comment.email }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <span fxLayout="row" fxLayoutAlign="space-around start">
+    <mat-card-content fxFlex="70">
+      <p class="card-content">
+        {{ comment.body }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions fxFlex="30">
+      <button
+        [ngClass]="{ active: isLiked }"
+        class="like-button"
+        mat-button
+        (click)="like()"
+      >
+        <mat-icon>
+          {{ iconCodeENUM.THUMB_UP }}
+        </mat-icon>
+      </button>
+    </mat-card-actions>
+  </span>
+</mat-card>
