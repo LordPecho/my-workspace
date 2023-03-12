@@ -9,9 +9,6 @@ import { Subscription } from 'rxjs';
 // API
 import { JSONUser } from '../../../models/json-user.model';
 
-// SERVICE
-import { JsonUserService } from '../../../services/json-user.service';
-
 //ANIMATIONS
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -31,11 +28,19 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class JsonUserMatTableComponent implements OnInit {
 
   //VAR
+  @Input() public avatarUrl: string;
   @Input() public data: JSONUser[] = [];
   @Input() dataSource: MatTableDataSource<JSONUser> = new MatTableDataSource;
   columnsToDisplay = ['id', 'name', 'username', 'email'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
   expandedElement: JSONUser | null;
+
+  private defaultAvatarUrl: string =
+  "assets/img/demo/avatars/noavatar.png"
+
+  public get avatarDisplay() {
+    return !!this.avatarUrl ? this.avatarUrl : this.defaultAvatarUrl;
+  }
 
   constructor(
     private router: Router,

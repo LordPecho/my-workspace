@@ -44,7 +44,9 @@ export class JsonHomePageComponent implements OnInit, OnDestroy {
   private innerHeight: number;
   private maxYPostion: number;
   public isUserSelected: boolean = false;
+
   public loadedPostId: number = 5;
+
   // VAR DEPENDENCY
   public userMap: Map<number, JSONUser> = new Map();
   public get users(): JSONUser[] {

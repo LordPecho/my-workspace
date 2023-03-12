@@ -6,8 +6,9 @@ import { CommonModule } from '@angular/common';
 import { MyHomePageRoutingModule } from './my-home-page-routing.module';
 import { MyHomePageComponent } from './my-home-page.component';
 
-// MODULES
-import { LayoutModule } from '../layout/layout.module';
+// MATERIAL
+import { MatCardModule } from '@angular/material/card';
+
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { LayoutModule } from '../layout/layout.module';
   ],
   imports: [
     CommonModule,
+    MatCardModule,
     MyHomePageRoutingModule
   ]
 })

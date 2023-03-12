@@ -24,9 +24,7 @@
           div fxLayout="row" fxLayoutAlign="space-between center"
           [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
         <div class="element-diagram">
-          <div class="element-position"> {{element.id}} </div>
-          <div class="element-symbol"> {{element.username}} </div>
-          <div class="element-name"> {{element.name}} </div>
+          <img class="avatar" alt="User avatar" [attr.src]="avatarDisplay" />
         </div>
         <div class="element-description">
         <div><span class="element-item element-item-up">Email: </span>{{element.email}}</div>

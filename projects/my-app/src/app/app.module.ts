@@ -42,7 +42,8 @@ export function createTranslateLoader(http: HttpClient) {
     // ALWAYS LAST!
     AppRoutingModule,
   ],
-  providers: [JSON_SERVICES_API],
+  providers: [
+    JSON_SERVICES_API],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

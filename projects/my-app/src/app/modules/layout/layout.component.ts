@@ -20,22 +20,19 @@ export class LayoutComponent implements OnInit {
   //menu list
   public menuList: any = [
    {
-    preTitle: 'JSON',
     title: 'main-nav.button-1.json-site',
     icon: 'account_box',
     routerLink: ['/', 'JSON'],
    },
    {
-    title: 'items.details.calendar',
-    icon: 'calendar_today',
-    routerLink: ['/', 'calendar'],
-    tempText: 'main-nav.button-1.tempText',
+    title: 'items.details.github',
+    icon: 'bug_report',
+    routerLink: ['/', 'github'],
    },
    {
     title: 'main-nav.button-1.item',
     icon: 'bug_report',
-    routerLink: ['/', 'CHAT'],
-    tempText: 'main-nav.button-1.tempText',
+    routerLink: ['/', 'item'],
    },
   ]
   constructor(
