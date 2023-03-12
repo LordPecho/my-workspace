@@ -1,0 +1,55 @@
+<div class="border" fxLayoutAlign="end center">
+  <div class="row" fxLayout="column" fxFlex="27%">
+    <h2 class="about">About</h2>
+    <p class="github">GitHub Pages</p>
+
+    <div *ngFor="let item of githubPages">
+      <div class="item-title">
+        <mat-icon class="item-icon"> {{item.icon}} </mat-icon>
+        <p class="item-title" fxFlex="27%">{{item.title}}</p>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+    <div class="releases">
+      <div class="title">Relases</div>
+      <div class="text">No releases published</div>
+      <div class="underline-text">Create a new release</div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="packages">
+      <div class="title">Packages</div>
+      <div class="text">No packages published</div>
+      <div class="underline-text">Publish your first package</div>
+
+    </div>
+    <mat-divider></mat-divider>
+    <div class="languages">
+      <div>Languages</div>
+      <span class="progress">
+        <span class="color-blue"></span>
+        <span class="color-red"></span>
+        <span class="color-pink"></span>
+        <span class="color-yellow"></span>
+      </span>
+    </div>
+    <ul class="programin-lang">
+      <li class="TypeScript">
+        <span>TypeScript</span>
+        <span> 56.9%</span>
+      </li>
+      <li class="HTML">
+        <span>HTML</span>
+        <span> 22.0%</span>
+      </li>
+      <li class="SCSS">
+        <span>SCSS</span>
+        <span> 15.6%</span>
+      </li>
+      <li class="JavaScript">
+        <span>JavaScript</span>
+        <span> 5.5%</span>
+      </li>
+    </ul>
+  </div>
+</div>

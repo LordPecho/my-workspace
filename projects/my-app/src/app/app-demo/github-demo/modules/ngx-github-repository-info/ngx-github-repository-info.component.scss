@@ -1,0 +1,107 @@
+/* Border */
+div.border > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: -61px;
+  padding-left: 50px;
+  gap: 10px;
+}
+p.github {
+  font-size: 20px;
+}
+
+div.item-title {
+  display: flex;
+}
+p.item-title {
+  display: flex;
+  padding-left: 10px;
+  font-size: 12px !important;
+  cursor: pointer;
+}
+.item-icon{
+  font-size: 16px;
+}
+.item-icon:hover, .item-title:hover{
+  color: #1F74EA;
+}
+.text{
+  font-size: 12px;
+}
+.title{
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+ .title:hover{
+  cursor: pointer;
+  color: #1F74EA;
+}
+ li:hover{
+  cursor: pointer;
+  color: #1F74EA;
+}
+.languages > div {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.underline-text{
+  font-size: 12px;
+  color: #1F74EA;
+  cursor: pointer;
+}
+.underline-text:hover{
+  text-decoration: underline;
+}
+
+/* Divider */
+.mat-divider {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+/* Progess Bar */
+
+.progress {
+  display: flex;
+  height: 11px;
+  overflow: hidden;
+  width: 80%;
+  border-radius: 6px;
+  outline: 1px solid transparent;
+}
+.color-blue {
+  background-color: #3178c6;
+  width: 56.9%;
+}
+.color-red {
+  background-color: #e34c26;
+  width: 22.0%;
+}
+.color-pink {
+  background-color: #c6538c;
+  width: 15.6%;
+}
+.color-yellow {
+  background-color: #f1e05a;
+  width: 5.5%;
+}
+
+.programin-lang {
+  columns: 2;
+}
+li::marker  {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+li.TypeScript::marker {
+  color:#3178c6;
+}
+li.HTML::marker {
+  color:#e34c26;
+}
+li.SCSS::marker {
+  color:#c6538c;
+}
+li.JavaScript::marker {
+  color:#f1e05a;
+}

@@ -11,11 +11,6 @@ export const devEnvironmentConfig: IEnvironment | any = {
     ngxGithubDemo: {
       apiUrl: 'https://api.github.com'
     },
-    ethVqi: {
-        apiUrl: 'http://localhost:5001/api',
-        coreUrl: 'http://localhost:5001/core',
-        authUrl: 'http://localhost:5001/auth',
-    },
     production: false,
     apiUrl: '',
     apiUrlWss: '',

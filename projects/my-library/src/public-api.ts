@@ -13,3 +13,6 @@ export * from './lib/common-js/index'
 
 // COMPONENTS-WEB
 export * from './lib/components-web/index'
+
+// NGX DIRECTIVES
+export * from './lib/directives/index'

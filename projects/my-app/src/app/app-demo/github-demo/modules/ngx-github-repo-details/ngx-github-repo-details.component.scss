@@ -1,0 +1,28 @@
+div > div > span {
+    padding-top: 1px;
+}
+.container{
+  margin: 35px 10px 25px 10px;
+}
+div > div > span.public {
+  margin:11px;
+  padding: 1px 7px 0 7px;
+  border: 1px solid gray;
+  border-radius: 0.7em;
+}
+.button-container > button {
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 1px 11px;
+  gap: 20px;
+  min-width: 100px;
+  max-width: 180px;
+}
+.title{
+position: relative;
+bottom: 5px;
+}
+
+.button{
+  font-size: 12px;
+}

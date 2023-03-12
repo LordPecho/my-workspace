@@ -1,0 +1,35 @@
+<div class="container" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end center">
+  <div  fxFlex="30">
+    <mat-icon>{{ ngxIconCodeENUM.LOCK }}</mat-icon>
+    <span> Microsoft </span>
+    <span>/</span>
+    <span>TypeScript</span>
+    <span class="public">Public</span>
+  </div>
+  <span fxFlex="30"><!-- SPACING --></span>
+  <div class="button-container" fxFlex>
+    <button class="button" mat-raised-button>
+      <mat-icon>{{ ngxIconCodeENUM.VISIBILITY }} </mat-icon>
+      {{ ngxTranslateKeyENUM.GITHUB_LABEL_WATCH | translate }}
+    </button>
+    <button class="button" mat-raised-button>
+      <mat-icon>{{ ngxIconCodeENUM.DEVICE_HUB }} </mat-icon>
+      {{ ngxTranslateKeyENUM.GITHUB_LABEL_FORK | translate }}
+    </button>
+    <button class="button" mat-raised-button>
+      <mat-icon>{{ ngxIconCodeENUM.STAR_BORDER }} </mat-icon>
+      {{ ngxTranslateKeyENUM.GITHUB_LABEL_STAR | translate }}
+    </button>
+  </div>
+</div>
+
+<mat-tab-group class="github-tab-group">
+  <mat-tab *ngFor="let item of navItemList">
+    <ng-template mat-tab-label>
+      <mat-icon> {{ item.icon }} </mat-icon> {{ item.title | translate }}
+    </ng-template>
+    <div class="demo-tab-content">
+      <ngx-github-tabs [title]="item.title"></ngx-github-tabs>
+    </div>
+  </mat-tab>
+</mat-tab-group>

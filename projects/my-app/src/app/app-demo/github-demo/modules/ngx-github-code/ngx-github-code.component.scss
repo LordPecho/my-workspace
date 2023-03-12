@@ -1,0 +1,70 @@
+div.container {
+  display: flex;
+  padding: 20px;
+  max-width: 100%;
+}
+.container>.row {
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 9px 22px 5px 16px;
+}
+
+span {
+  padding-left: 10px;
+}
+
+div > div.btn > div {
+  padding-left: 380px;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+div > div.btn > div > span.code {
+    background-color: green;
+    color: white;
+    padding: 10px 10px 10px 16px;
+    border-radius: 6px;
+}
+
+.merge{
+  margin-left: 50px;
+  font-size: 14px;
+}
+.tags{
+  margin-left: 40px;
+  font-size: 14px;
+}
+.master-button{
+  font-size: 14px;
+}
+.merge:hover{
+  cursor: pointer;
+  color: blue;
+}
+.tags:hover{
+  cursor: pointer;
+  color: blue;
+}
+.code-button{
+  background-color: green;
+}
+@media screen and (min-width: 2300px) {
+  div > div.btn > div {
+    padding-left: 700px;
+  }
+}
+@media screen and (max-width: 2200px) {
+  div > div.btn > div {
+    padding-left: 400px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  div > div.btn > div {
+    padding-left: 200px;
+  }
+}
+@media screen and (max-width: 1530px) {
+  div > div.btn > div {
+    padding-left: 50px;
+  }
+}

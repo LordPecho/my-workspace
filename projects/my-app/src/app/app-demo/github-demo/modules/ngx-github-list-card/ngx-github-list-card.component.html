@@ -1,0 +1,128 @@
+<div class="items-container" fxLayout="row" fxLayoutAlign="center">
+  <span class="items" fxFlex="50">
+    <mat-card class="header-card" fxLayout="row" fxLayoutAlign="start center">
+      <span><mat-checkbox (change)="changeChecked()"></mat-checkbox></span>
+      <button class="button-open" mat-button (click)="changeState('open')">
+        <mat-icon>{{ openIcon }}</mat-icon>
+        {{ opened }} Open
+      </button>
+      <button class="button-close" mat-button (click)="changeState('close')">
+        <mat-icon>{{ closeIcon }}</mat-icon>
+        {{ closed }} Closed
+      </button>
+
+      <form [formGroup]="userForm" fxLayout="row" fxLayoutAlign="start center">
+        <mat-form-field floatPlaceholder="never" fxFlex>
+          <mat-label>label</mat-label>
+
+          <mat-select
+            (valueChange)="filterUser($event)"
+            #multiSelect
+            multiple
+            disableOptionCentering="true"
+          >
+            <mat-option
+              [disabled]="true"
+              (click)="$event.stopPropagation(); $event.preventDefault()"
+            >
+              <input
+                placeholder="Search.."
+                matInput
+                [formControl]="filterFormControl"
+                type="text"
+                autocomplete="off"
+              />
+
+
+            </mat-option>
+            <mat-option
+              *ngFor="let user of filteredUserList"
+              [value]="user.login"
+            >
+              <img
+                class="avatar-select"
+                alt="User avatar"
+                [attr.src]="user.avatar_url"
+              />
+              {{ user.login }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </mat-card>
+    <div *ngFor="let item of data">
+      <span *ngIf="filter(item.user.login)">
+        <mat-card
+          *ngIf="getState(item)"
+          class="item-card"
+          fxLayout="row"
+          fxLayoutAlign="start center"
+        >
+          <div class="card-checkbox">
+            <mat-checkbox [checked]="isChecked"></mat-checkbox>
+          </div>
+          <div class="item-card-header">
+            <mat-card-title class="item-card-title">{{
+              item.title
+            }}</mat-card-title>
+            <mat-card-subtitle class="item-card-subtitle"
+              >#{{ item.number }} by
+              <span>
+                <span
+                  class="user-name"
+                  (mouseover)="hoverOver(item.number)"
+                  (mouseout)="hoverLeave()"
+                  >{{ item.user.login }}</span
+                >
+              </span>
+            </mat-card-subtitle>
+          </div>
+        </mat-card>
+      </span>
+      <div class="user-details" *ngIf="userDetails(item.number)">
+        <div (mouseover)="hoverOver(item.number)" (mouseout)="hoverLeave()">
+          <mat-card>
+            <mat-card-header>
+              <div mat-card-avatar>
+                <img
+                  class="avatar"
+                  alt="User avatar"
+                  [attr.src]="item.user.avatar_url"
+                />
+              </div>
+              <mat-card-title>
+                <h3>
+                  {{ item.user.login }}
+                </h3>
+              </mat-card-title>
+            </mat-card-header>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <mat-card
+      class="item-card"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      class="no-opened-requests-container"
+      *ngIf="noOpen"
+    >
+      <div class="icon">
+        <mat-icon>{{ openIcon }}</mat-icon>
+      </div>
+      <div><h2>No results matched your search.</h2></div>
+    </mat-card>
+    <mat-card
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      class="no-closed-requests-container"
+      *ngIf="noClose"
+    >
+      <div class="icon">
+        <mat-icon>{{ openIcon }}</mat-icon>
+      </div>
+      <div><h2>No results matched your search.</h2></div>
+    </mat-card>
+  </span>
+</div>

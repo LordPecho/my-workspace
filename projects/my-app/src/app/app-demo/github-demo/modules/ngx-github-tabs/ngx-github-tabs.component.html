@@ -1,0 +1,23 @@
+<div [ngSwitch]="title">
+  <ngx-github-code
+    *ngSwitchCase="ngxTranslateKeyENUM.GITHUB_LABEL_CODE"
+  ></ngx-github-code>
+  <ngx-github-issues
+    *ngSwitchCase="ngxTranslateKeyENUM.GITHUB_LABEL_ISSUES"
+  ></ngx-github-issues>
+  <ngx-github-pull-requests
+    *ngSwitchCase="ngxTranslateKeyENUM.GITHUB_LABEL_PULL_REQUESTS"
+  ></ngx-github-pull-requests>
+  <ngx-github-actions
+    *ngSwitchCase="ngxTranslateKeyENUM.GITHUB_LABEL_ACTIONS"
+  ></ngx-github-actions>
+  <ngx-github-projects
+    *ngSwitchCase="ngxTranslateKeyENUM.GITHUB_LABEL_PROJECTS"
+  ></ngx-github-projects>
+  <ngx-github-security
+    *ngSwitchCase="ngxTranslateKeyENUM.GITHUB_LABEL_SECURITY"
+  ></ngx-github-security>
+  <ngx-github-insight
+    *ngSwitchCase="ngxTranslateKeyENUM.GITHUB_LABEL_INSIGHTS"
+  ></ngx-github-insight>
+</div>

@@ -1,0 +1,65 @@
+.items-container{
+  margin-top: 15px;
+}
+.items{
+  border: 1px solid gray;
+}
+.header-card{
+  border-top: 1px solid gray;
+}
+.item-card{
+  border-top: 1px solid gray;
+}
+.item-card-title{
+  font-size: 16px;
+}
+.card-checkbox{
+  margin-right: 10px;
+}
+.button-close, .button-open{
+  text-align: center;
+  margin: 0 10px 0 10px;
+  padding: 5px;
+}
+.no-opened-requests-container,
+.no-closed-requests-container {
+  height: 300px;
+  border-top: 1px solid gray;
+}
+.no-opened-requests-container div,
+.no-closed-requests-container div {
+  margin: 16px;
+}
+.user-name{
+  cursor: pointer;
+}
+.user-details{
+  cursor: pointer;
+  padding-bottom: 10px;
+  font-size: 11px;
+}
+.user-details {
+  position: relative;
+  max-width: 320px;
+  padding: 10px;
+  background-color:#FFF;
+  color: #666;
+  font: normal 12px "Segoe UI", Arial, Sans-serif;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 10px solid rgba(0,0,0,0.095);
+}
+.user-details p {
+  font-size: 1.25em;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.avatar-select {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}

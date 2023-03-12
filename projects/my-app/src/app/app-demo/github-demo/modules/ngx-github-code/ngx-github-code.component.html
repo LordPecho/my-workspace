@@ -1,0 +1,38 @@
+<div class="container"
+fxLayout="row">
+  <button class="master-button" mat-raised-button>
+    <mat-icon>call_merge</mat-icon>
+    <span class="master">master</span>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+
+  <button mat-button class="merge">
+    <mat-icon>call_merge</mat-icon>
+    <span>branch</span>
+  </button>
+
+  <button mat-button class="tags">
+    <mat-icon>local_offer</mat-icon>
+    <span>tags</span>
+  </button>
+
+  <div fxLayout="row" class="btn" fxLayoutAlign="end center">
+    <div fxLayout="row" fxLayoutGap="35px">
+      <button mat-raised-button>Go to File</button>
+      <button mat-raised-button class="code-button">
+        Code
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Table -->
+<div>
+  <span fxFlex="70%">
+    <ngx-github-repository-table></ngx-github-repository-table>
+  </span>
+  <span fxFlex="25%">
+    <ngx-github-repository-info></ngx-github-repository-info>
+  </span>
+</div>

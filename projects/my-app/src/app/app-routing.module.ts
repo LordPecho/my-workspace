@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { LayoutComponent } from './modules/layout/layout.component';
 import { JsonLayoutComponent } from './app-demo/json-placeholder-demo/modules/dashboards/json-layout/json-layout.component';
 import { MyHomePageComponent } from './modules/my-home-page/my-home-page.component';
+import { NgxGithubDemoComponent } from './app-demo/github-demo/ngx-github-demo.component';
 
 const routes: Routes = [
  {
@@ -29,7 +30,6 @@ const routes: Routes = [
             path: 'users/:userId',
             loadChildren: () => import('./app-demo/json-placeholder-demo/modules/users/json-user-crud-page/json-user-crud-page.module').then(m => m.JsonUserCrudPageModule),
           },
-          // TEMP ROUTING BUG FIX
           {
             path: 'users/:userId/:albumId',
             loadChildren: () => import('./app-demo/json-placeholder-demo/modules/albums/json-album-crud-page/json-album-crud-page.module').then(m => m.JsonAlbumCrudPageModule),
@@ -43,6 +43,11 @@ const routes: Routes = [
             loadChildren: () => import('./app-demo/json-placeholder-demo/modules/albums/json-album-crud-page/json-album-crud-page.module').then(m => m.JsonAlbumCrudPageModule),
           },
         ]
+      },
+      {
+        component: NgxGithubDemoComponent,
+        path:'github',
+        loadChildren: () => import('./app-demo/github-demo/ngx-github-demo.module').then(m => m.NgxGithubDemoModule),
       },
       {
         component: MyHomePageComponent,
