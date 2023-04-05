@@ -11,9 +11,8 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None,
 })
 export class JsonLayoutComponent implements OnInit {
-
   //VAR
-  public list: any[] =[
+  public list: any[] = [
     {
       title: 'home',
       icon: 'home',
@@ -29,17 +28,13 @@ export class JsonLayoutComponent implements OnInit {
       icon: 'filter',
       routerLink: ['/', 'JSON', 'albums'],
     },
-  ]
+  ];
 
-  constructor(
-    private router: Router,
-  ) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  public navigate(item: any) {
+    this.router.navigate(item);
   }
-
-  public navigate(item: any){
-    this.router.navigate(item)
-  }
-
 }

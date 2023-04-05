@@ -10,42 +10,35 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent implements OnInit {
-
   //VAR
   public logout: string = 'false';
 
   //menu list
   public menuList: any = [
-   {
-    title: 'main-nav.button-1.json-site',
-    icon: 'account_box',
-    routerLink: ['/', 'JSON'],
-   },
-   {
-    title: 'items.details.github',
-    icon: 'bug_report',
-    routerLink: ['/', 'github'],
-   },
-   {
-    title: 'main-nav.button-1.item',
-    icon: 'bug_report',
-    routerLink: ['/', 'item'],
-   },
-  ]
-  constructor(
-    private router: Router,
-  ){
+    {
+      title: 'main-nav.button-1.json-site',
+      icon: 'account_box',
+      routerLink: ['/', 'JSON'],
+    },
+    {
+      title: 'items.details.github',
+      icon: 'bug_report',
+      routerLink: ['/', 'github'],
+    },
+    {
+      title: 'main-nav.button-1.item',
+      icon: 'bug_report',
+      routerLink: ['/', 'item'],
+    },
+  ];
+  constructor(private router: Router) {}
 
-   }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-
-  public navigate(item: any){
-   this.router.navigate(item);
+  public navigate(item: any) {
+    this.router.navigate(item);
   }
 }

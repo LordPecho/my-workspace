@@ -9,11 +9,11 @@ const routes: Routes = [
   {
     path: '',
     component: JsonUserCrudPageComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class JsonUserCrudPageRoutingModule { }
+export class JsonUserCrudPageRoutingModule {}

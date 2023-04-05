@@ -6,14 +6,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { JsonHomePageComponent } from './json-home-page.component';
 
 const routes: Routes = [
-{
-path:'',
-component: JsonHomePageComponent,
-}
+  {
+    path: '',
+    component: JsonHomePageComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class JsonHomePageRoutingModule { }
+export class JsonHomePageRoutingModule {}

@@ -12,16 +12,19 @@
       {{ user.email }}
     </mat-card-subtitle>
   </mat-card-header>
-
-  <h2>{{ ngxTranslateKeyENUM.COMMON_LABEL_TITLE | translate }}:</h2>
-  <p>
-    {{ post.title }}
-  </p>
-  <mat-card-content class="card-content-container">
-    <h2>{{ ngxTranslateKeyENUM.COMMON_LABEL_BODY | translate }}:</h2>
-    <p class="card-content">
-      {{ post.body }}
+  <div class="post-title-container">
+    <h2 class="post-title">{{ ngxTranslateKeyENUM.COMMON_LABEL_TITLE | translate }}:</h2>
+    <p class="post-title-content">
+      {{ post.title }}
     </p>
+  </div>
+  <mat-card-content class="card-content-container">
+    <div class="post-content-container">
+      <h2 class="post-content-title">{{ ngxTranslateKeyENUM.COMMON_LABEL_BODY | translate }}:</h2>
+      <p class="card-content post-content">
+        {{ post.body }}
+      </p>
+    </div>
   </mat-card-content>
   <mat-card-actions fxLayout="row" fxLayoutAlign="space-evenly center">
     <button

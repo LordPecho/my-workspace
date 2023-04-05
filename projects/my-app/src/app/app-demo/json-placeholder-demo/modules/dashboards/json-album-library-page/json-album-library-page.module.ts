@@ -17,11 +17,8 @@ import { JsonAlbumMatTableModule } from '../../albums/json-album-mat-table/json-
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-
 @NgModule({
-  declarations: [
-    JsonAlbumLibraryPageComponent
-  ],
+  declarations: [JsonAlbumLibraryPageComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -31,7 +28,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     JsonAlbumMatTableModule,
     MatSelectModule,
     MatFormFieldModule,
-    JsonAlbumLibraryPageRoutingModule
-  ]
+    JsonAlbumLibraryPageRoutingModule,
+  ],
 })
-export class JsonAlbumLibraryPageModule { }
+export class JsonAlbumLibraryPageModule {}

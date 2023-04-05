@@ -8,16 +8,8 @@ import { JsonPhotoGalleryComponent } from './json-photo-gallery.component';
 import { PhotoviewerModule } from 'my-library';
 
 @NgModule({
-  declarations: [
-    JsonPhotoGalleryComponent
-  ],
-  exports: [
-    JsonPhotoGalleryComponent
-  ],
-  imports: [
-    CommonModule,
-    PhotoviewerModule,
-    JsonPhotoGalleryRoutingModule
-  ]
+  declarations: [JsonPhotoGalleryComponent],
+  exports: [JsonPhotoGalleryComponent],
+  imports: [CommonModule, PhotoviewerModule, JsonPhotoGalleryRoutingModule],
 })
-export class JsonPhotoGalleryModule { }
+export class JsonPhotoGalleryModule {}

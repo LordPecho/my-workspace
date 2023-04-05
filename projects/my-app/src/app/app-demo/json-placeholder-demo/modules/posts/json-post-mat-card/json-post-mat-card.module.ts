@@ -15,14 +15,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
 @NgModule({
-  declarations: [
-    JsonPostMatCardComponent
-  ],
-  exports: [
-    JsonPostMatCardComponent
-  ],
+  declarations: [JsonPostMatCardComponent],
+  exports: [JsonPostMatCardComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -30,7 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    JsonPostMatCardRoutingModule
-  ]
+    JsonPostMatCardRoutingModule,
+  ],
 })
-export class JsonPostMatCardModule { }
+export class JsonPostMatCardModule {}

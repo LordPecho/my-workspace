@@ -12,23 +12,22 @@ export class NgxGithubRepositoryInfoComponent implements OnInit {
   public githubPages: any[] = [
     {
       title: 'ReadMe',
-      icon: 'chrome_reader_mode'
+      icon: 'chrome_reader_mode',
     },
     {
       title: 'stars',
-      icon: 'star_border'
+      icon: 'star_border',
     },
     {
       title: 'watching',
-      icon: 'visibility'
+      icon: 'visibility',
     },
     {
       title: 'forks',
-      icon: 'call_split'
-    }
-  ]
+      icon: 'call_split',
+    },
+  ];
   constructor() {}
-
 
   ngOnInit(): void {}
 }

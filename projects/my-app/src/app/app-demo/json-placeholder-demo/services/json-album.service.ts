@@ -9,19 +9,14 @@ import { Injectable, Injector } from '@angular/core';
 import { map, Observable } from 'rxjs';
 
 // API
-import {
-  IDataTableColumn,
-  TranslateKeyENUM,
-  setHttpParams,
-} from 'my-library';
+import { IDataTableColumn, TranslateKeyENUM, setHttpParams } from 'my-library';
 import { JSONAlbum, IJSONAlbum } from '../models/json-album.model';
 import { IJSONPhoto, JSONPhoto } from '../models/json-photo.model';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class JsonAlbumService {
-
-  constructor(private httpClient: HttpClient, private injector: Injector) { }
+  constructor(private httpClient: HttpClient, private injector: Injector) {}
 
   public getAlbums(queryParams?: any): Observable<JSONAlbum[]> {
     const params: HttpParams = setHttpParams(queryParams);
@@ -42,11 +37,12 @@ export class JsonAlbumService {
 
   public getUserAlbums(queryParams?: any): Observable<IJSONAlbum[]> {
     const params: HttpParams = setHttpParams(queryParams);
-    return this.httpClient
-      .get<IJSONAlbum[]>(environment.jsonPlaceholder.apiUrl + 'albums', {
+    return this.httpClient.get<IJSONAlbum[]>(
+      environment.jsonPlaceholder.apiUrl + 'albums',
+      {
         params,
-      })
-
+      }
+    );
   }
 
   public getAlbum(albumId: string): Observable<IJSONAlbum> {

@@ -18,15 +18,14 @@ import { IJSONUser, JSONUser } from '../models/json-user.model';
 import { IDataTableColumn, TranslateKeyENUM } from 'my-library';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class JsonUserService {
+  constructor(private httpClient: HttpClient, private injector: Injector) {}
 
-  constructor(private httpClient: HttpClient,private injector: Injector) { }
-
-    //GET ALL
-    public getUsers(): Observable<JSONUser[]>{
-      return this.httpClient
+  //GET ALL
+  public getUsers(): Observable<JSONUser[]> {
+    return this.httpClient
       .get<JSONUser[]>(environment.jsonPlaceholder.apiUrl + 'users')
       .pipe(
         map((data: IJSONUser[]) => {
@@ -37,57 +36,57 @@ export class JsonUserService {
           return sanitizedData;
         })
       );
-    }
+  }
 
-    // GET USER BY ID
+  // GET USER BY ID
   public getUser(userId: string): Observable<IJSONUser> {
     return this.httpClient.get<IJSONUser>(
       environment.jsonPlaceholder.apiUrl + 'users' + '/' + userId
     );
   }
 
-    public dataTableColumns(): IDataTableColumn[] {
-      return [
-        { property: 'id', fixVisible: true, visible: true },
-        {
-          property: 'name',
-          fixVisible: false,
-          visible: true,
-          headerTranslateKey: TranslateKeyENUM.USERS_LABEL_NAME,
-        },
-        {
-          property: 'username',
-          fixVisible: false,
-          visible: true,
-          headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_USERNAME,
-        },
-        {
-          property: 'email',
-          fixVisible: false,
-          visible: true,
-          headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_EMAIL,
-        },
-        {
-          property: 'phone',
-          fixVisible: false,
-          visible: true,
-          headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_PHONE,
-        },
-        {
-          property: 'website',
-          fixVisible: false,
-          visible: true,
-          headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_WEBSITE,
-        },
-        {
-          property: 'company',
-          fixVisible: false,
-          visible: true,
-          headerTranslateKey: TranslateKeyENUM.COMPANY_LABEL_MODEL,
-        },
-        { property: 'menuActions', fixVisible: true, visible: true },
-      ] as IDataTableColumn[];
-    }
+  public dataTableColumns(): IDataTableColumn[] {
+    return [
+      { property: 'id', fixVisible: true, visible: true },
+      {
+        property: 'name',
+        fixVisible: false,
+        visible: true,
+        headerTranslateKey: TranslateKeyENUM.USERS_LABEL_NAME,
+      },
+      {
+        property: 'username',
+        fixVisible: false,
+        visible: true,
+        headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_USERNAME,
+      },
+      {
+        property: 'email',
+        fixVisible: false,
+        visible: true,
+        headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_EMAIL,
+      },
+      {
+        property: 'phone',
+        fixVisible: false,
+        visible: true,
+        headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_PHONE,
+      },
+      {
+        property: 'website',
+        fixVisible: false,
+        visible: true,
+        headerTranslateKey: TranslateKeyENUM.COMMON_LABEL_WEBSITE,
+      },
+      {
+        property: 'company',
+        fixVisible: false,
+        visible: true,
+        headerTranslateKey: TranslateKeyENUM.COMPANY_LABEL_MODEL,
+      },
+      { property: 'menuActions', fixVisible: true, visible: true },
+    ] as IDataTableColumn[];
+  }
 
   public formGroup(): FormGroup {
     const jsonAddressService = this.injector.get(JsonAddressService);

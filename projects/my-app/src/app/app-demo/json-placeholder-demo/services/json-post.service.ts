@@ -12,13 +12,11 @@ import { map, Observable } from 'rxjs';
 import { setHttpParams } from 'my-library';
 import { IJSONPost, JSONPost } from '../models/json-post.model';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class JsonPostService {
-
-  constructor(private httpClient: HttpClient, private injector: Injector) { }
+  constructor(private httpClient: HttpClient, private injector: Injector) {}
 
   public getPosts(queryParams?: any): Observable<JSONPost[]> {
     const params: HttpParams = setHttpParams(queryParams);
@@ -34,5 +32,4 @@ export class JsonPostService {
         })
       );
   }
-
 }

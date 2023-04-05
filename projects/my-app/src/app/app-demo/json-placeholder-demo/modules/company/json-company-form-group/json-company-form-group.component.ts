@@ -21,7 +21,8 @@ export class JsonCompanyFormGroupComponent implements OnInit {
   }
 
   // VAR
-  @Input() public dataFormGroup: FormGroup = this.jsonCompanyService.formGroup();
+  @Input() public dataFormGroup: FormGroup =
+    this.jsonCompanyService.formGroup();
 
   constructor(private jsonCompanyService: JsonCompanyService) {}
 

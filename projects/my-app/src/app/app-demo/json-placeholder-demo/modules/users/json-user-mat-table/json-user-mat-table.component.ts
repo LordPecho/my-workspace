@@ -1,8 +1,13 @@
 // ANGULAR
-import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Router, ActivatedRoute } from '@angular/router'
-;
+import { Router, ActivatedRoute } from '@angular/router';
 // RXJS
 import { Subscription } from 'rxjs';
 
@@ -10,8 +15,13 @@ import { Subscription } from 'rxjs';
 import { JSONUser } from '../../../models/json-user.model';
 
 //ANIMATIONS
-import { animate, state, style, transition, trigger } from '@angular/animations';
-
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-json-user-mat-table',
@@ -19,42 +29,35 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   styleUrls: ['./json-user-mat-table.component.scss'],
   animations: [
     trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ),
     ]),
   ],
 })
 export class JsonUserMatTableComponent implements OnInit {
-
   //VAR
   @Input() public avatarUrl: string;
   @Input() public data: JSONUser[] = [];
-  @Input() dataSource: MatTableDataSource<JSONUser> = new MatTableDataSource;
+  @Input() dataSource: MatTableDataSource<JSONUser> = new MatTableDataSource();
   columnsToDisplay = ['id', 'name', 'username', 'email'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
   expandedElement: JSONUser | null;
 
-  private defaultAvatarUrl: string =
-  "assets/img/demo/avatars/noavatar.png"
+  private defaultAvatarUrl: string = 'assets/img/demo/avatars/noavatar.png';
 
   public get avatarDisplay() {
     return !!this.avatarUrl ? this.avatarUrl : this.defaultAvatarUrl;
   }
 
-  constructor(
-    private router: Router,
-  ) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  public navigate(item: JSONUser) {
+    this.router.navigate(item.routerLink);
   }
-
-  public navigate(item: JSONUser){
-   this.router.navigate(item.routerLink);
-
-  }
-
-
-
 }

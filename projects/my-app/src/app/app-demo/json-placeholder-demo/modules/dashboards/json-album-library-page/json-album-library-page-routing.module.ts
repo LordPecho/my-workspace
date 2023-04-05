@@ -7,13 +7,13 @@ import { JsonAlbumLibraryPageComponent } from './json-album-library-page.compone
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: JsonAlbumLibraryPageComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class JsonAlbumLibraryPageRoutingModule { }
+export class JsonAlbumLibraryPageRoutingModule {}

@@ -16,7 +16,7 @@ import { JsonUserService } from '../../../services/json-user.service';
 @Component({
   selector: 'app-json-user-crud-page',
   templateUrl: './json-user-crud-page.component.html',
-  styleUrls: ['./json-user-crud-page.component.scss']
+  styleUrls: ['./json-user-crud-page.component.scss'],
 })
 export class JsonUserCrudPageComponent {
   // VAR
@@ -28,25 +28,30 @@ export class JsonUserCrudPageComponent {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private jsonUserService: JsonUserService,
-  ) { }
+    private jsonUserService: JsonUserService
+  ) {}
 
   ngOnInit(): void {
     // READ PARAMS CHANGE
-    this.subscription.add(this.activatedRoute.params.subscribe((params: Params) => {
-      Object.entries(params).forEach((property: [string, any]) => {
-        this[property[0]] = +property[1];
-      });
-      this.loadData();
-    }));
+    this.subscription.add(
+      this.activatedRoute.params.subscribe((params: Params) => {
+        Object.entries(params).forEach((property: [string, any]) => {
+          this[property[0]] = +property[1];
+        });
+        this.loadData();
+      })
+    );
   }
 
   private loadData() {
-    this.subscription.add(this.jsonUserService.getUser(this.userId.toString()).subscribe((jsonUserDOM: IJSONUser) => {
-      this.data = new JSONUser(jsonUserDOM);
-      this.dataFormGroup.patchValue(this.data);
-      console.log(this.data);
-    }));
+    this.subscription.add(
+      this.jsonUserService
+        .getUser(this.userId.toString())
+        .subscribe((jsonUserDOM: IJSONUser) => {
+          this.data = new JSONUser(jsonUserDOM);
+          this.dataFormGroup.patchValue(this.data);
+          console.log(this.data);
+        })
+    );
   }
-
 }

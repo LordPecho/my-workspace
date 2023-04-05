@@ -15,19 +15,15 @@ import { JsonCommentOverviewModule } from '../../comments/json-comment-overview/
 import { JsonPostMatCardModule } from '../json-post-mat-card/json-post-mat-card.module';
 
 @NgModule({
-  declarations: [
-    JsonPostsComponent
-  ],
-  exports:[
-    JsonPostsComponent
-  ],
+  declarations: [JsonPostsComponent],
+  exports: [JsonPostsComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
     MatCardModule,
     JsonPostMatCardModule,
     JsonCommentOverviewModule,
-    JsonPostsRoutingModule
-  ]
+    JsonPostsRoutingModule,
+  ],
 })
-export class JsonPostsModule { }
+export class JsonPostsModule {}

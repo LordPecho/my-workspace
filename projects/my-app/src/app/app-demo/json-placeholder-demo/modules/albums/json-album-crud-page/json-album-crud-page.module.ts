@@ -9,15 +9,12 @@ import { JsonAlbumCrudPageComponent } from './json-album-crud-page.component';
 // MODULE
 import { JsonAlbumDetailsModule } from '../json-album-details/json-album-details.module';
 
-
 @NgModule({
-  declarations: [
-    JsonAlbumCrudPageComponent
-  ],
+  declarations: [JsonAlbumCrudPageComponent],
   imports: [
     CommonModule,
     JsonAlbumDetailsModule,
-    JsonAlbumCrudPageRoutingModule
-  ]
+    JsonAlbumCrudPageRoutingModule,
+  ],
 })
-export class JsonAlbumCrudPageModule { }
+export class JsonAlbumCrudPageModule {}

@@ -7,7 +7,6 @@ import { NgModule } from '@angular/core';
 import { JsonUserAlbumRoutingModule } from './json-user-album-routing.module';
 import { JsonUserAlbumComponent } from './json-user-album.component';
 
-
 // 3Lib
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
@@ -16,14 +15,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { JsonAlbumMatTableModule } from '../../albums/json-album-mat-table/json-album-mat-table.module';
 import { FilterInputFormControlModule } from 'my-library';
 
-
 @NgModule({
-  declarations: [
-    JsonUserAlbumComponent
-  ],
-  exports: [
-    JsonUserAlbumComponent
-  ],
+  declarations: [JsonUserAlbumComponent],
+  exports: [JsonUserAlbumComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -31,7 +25,7 @@ import { FilterInputFormControlModule } from 'my-library';
     TranslateModule,
     FilterInputFormControlModule,
     JsonAlbumMatTableModule,
-    JsonUserAlbumRoutingModule
-  ]
+    JsonUserAlbumRoutingModule,
+  ],
 })
-export class JsonUserAlbumModule { }
+export class JsonUserAlbumModule {}

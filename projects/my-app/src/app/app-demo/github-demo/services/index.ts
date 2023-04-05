@@ -1,8 +1,5 @@
 // APi
 
-import { NgxGithubService } from "./ngx-github.service";
+import { NgxGithubService } from './ngx-github.service';
 
-
-export const GITHUB_SERVICES_API: any[] = [
-    NgxGithubService
-];
+export const GITHUB_SERVICES_API: any[] = [NgxGithubService];

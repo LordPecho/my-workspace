@@ -1,90 +1,123 @@
 <div class="json-user-form-group">
   <form [formGroup]="dataFormGroup">
+    <div>
       <div>
-          <div>
-              <h3>
-                  {{ ngxTranslateKeyENUM.COMMON_LABEL_DETAILS| translate }}
-              </h3>
-          </div>
-          <div>
-              <div fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-                  <mat-form-field fxFlex="33">
-                      <mat-label>{{ngxTranslateKeyENUM.USERS_LABEL_NAME | translate}}</mat-label>
-                      <input matInput [formControlName]="'name'">
-                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                      <!-- <mat-hint>Hint</mat-hint> -->
-                      <!-- <mat-error *ngIf="getControl('name').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
-                  </mat-form-field>
-                  <mat-form-field fxFlex="33">
-                      <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_USERNAME | translate}}</mat-label>
-                      <input matInput [formControlName]="'username'">
-                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                      <!-- <mat-hint>Hint</mat-hint> -->
-                      <!-- <mat-error *ngIf="getControl('username').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
-                  </mat-form-field>
-                  <mat-form-field fxFlex="33">
-                      <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_PHONE | translate}}</mat-label>
-                      <input matInput [formControlName]="'phone'">
-                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                      <!-- <mat-hint>Hint</mat-hint> -->
-                      <!-- <mat-error *ngIf="getControl('name').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
-                  </mat-form-field>
-              </div>
-          </div>
+        <h3>
+          {{ ngxTranslateKeyENUM.COMMON_LABEL_DETAILS | translate }}
+        </h3>
       </div>
       <div>
-          <div fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-              <mat-form-field fxFlex="33">
-                  <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_EMAIL | translate}}</mat-label>
-                  <input matInput [formControlName]="'email'">
-                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                  <!-- <mat-hint>Hint</mat-hint> -->
-                  <!-- <mat-error *ngIf="getControl('email').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
-              </mat-form-field>
-              <mat-form-field fxFlex="33">
-                  <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_WEBSITE | translate}}</mat-label>
-                  <input matInput [formControlName]="'website'">
-                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                  <!-- <mat-hint>Hint</mat-hint> -->
-                  <!-- <mat-error *ngIf="getControl('username').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
-              </mat-form-field>
-              <span fxFlex="33">
-
-              </span>
-          </div>
+        <div
+          fxFlex="100"
+          fxLayout="row"
+          fxLayout.xs="column"
+          fxLayout.sm="column"
+          fxLayout.md="row"
+          fxLayoutGap="16px"
+        >
+          <mat-form-field fxFlex="33">
+            <mat-label>{{
+              ngxTranslateKeyENUM.USERS_LABEL_NAME | translate
+            }}</mat-label>
+            <input matInput [formControlName]="'name'" />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <!-- <mat-hint>Hint</mat-hint> -->
+            <!-- <mat-error *ngIf="getControl('name').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
+          </mat-form-field>
+          <mat-form-field fxFlex="33">
+            <mat-label>{{
+              ngxTranslateKeyENUM.COMMON_LABEL_USERNAME | translate
+            }}</mat-label>
+            <input matInput [formControlName]="'username'" />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <!-- <mat-hint>Hint</mat-hint> -->
+            <!-- <mat-error *ngIf="getControl('username').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
+          </mat-form-field>
+          <mat-form-field fxFlex="33">
+            <mat-label>{{
+              ngxTranslateKeyENUM.COMMON_LABEL_PHONE | translate
+            }}</mat-label>
+            <input matInput [formControlName]="'phone'" />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <!-- <mat-hint>Hint</mat-hint> -->
+            <!-- <mat-error *ngIf="getControl('name').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        fxFlex="100"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayout.sm="column"
+        fxLayout.md="row"
+        fxLayoutGap="16px"
+      >
+        <mat-form-field fxFlex="33">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_EMAIL | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'email'" />
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+          <!-- <mat-error *ngIf="getControl('email').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
+        </mat-form-field>
+        <mat-form-field fxFlex="33">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_WEBSITE | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'website'" />
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+          <!-- <mat-error *ngIf="getControl('username').hasError('required')">{{ 'You must enter a value' }}</mat-error> -->
+        </mat-form-field>
+        <span fxFlex="33"> </span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h3>
+          {{ ngxTranslateKeyENUM.COMMON_LABEL_ADDRESS | translate }}
+        </h3>
       </div>
       <div>
-          <div>
-              <h3>
-                  {{ ngxTranslateKeyENUM.COMMON_LABEL_ADDRESS | translate }}
-              </h3>
-          </div>
-          <div>
-              <div fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-                  <span fxFlex="60">
-                      <json-address-form-group [dataFormGroup]="addressFormGroup"></json-address-form-group>
-                  </span>
-                  <span fxFlex="40">
-                      <!-- <lib-ngx-agm-core-map
+        <div
+          fxFlex="100"
+          fxLayout="row"
+          fxLayout.xs="column"
+          fxLayout.sm="column"
+          fxLayout.md="row"
+          fxLayoutGap="16px"
+        >
+          <span fxFlex="60">
+            <json-address-form-group
+              [dataFormGroup]="addressFormGroup"
+            ></json-address-form-group>
+          </span>
+          <span fxFlex="40">
+            <!-- <lib-ngx-agm-core-map
                           [zoom]="15"
                           [latitude]="latitude"
                           [longitude]="longitude"
                           [height]="'256px'"
                           (eventEmitter)="childEventEmitter($event)">
                       </lib-ngx-agm-core-map> -->
-                  </span>
-              </div>
-          </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h3>
+          {{ ngxTranslateKeyENUM.COMPANY_LABEL_MODEL | translate }}
+        </h3>
       </div>
       <div>
-          <div>
-              <h3>
-                  {{ ngxTranslateKeyENUM.COMPANY_LABEL_MODEL | translate }}
-              </h3>
-          </div>
-          <div>
-              <json-company-form-group [dataFormGroup]="companyFormGroup"></json-company-form-group>
-          </div>
+        <json-company-form-group
+          [dataFormGroup]="companyFormGroup"
+        ></json-company-form-group>
       </div>
+    </div>
   </form>
 </div>

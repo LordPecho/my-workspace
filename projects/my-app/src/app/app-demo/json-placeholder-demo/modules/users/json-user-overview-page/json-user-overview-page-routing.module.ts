@@ -9,11 +9,11 @@ const routes: Routes = [
   {
     path: '',
     component: JsonUserOverviewPageComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class JsonUserOverviewPageRoutingModule { }
+export class JsonUserOverviewPageRoutingModule {}

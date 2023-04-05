@@ -31,7 +31,7 @@ class DashboardHomeJSON {
 @Component({
   selector: 'app-json-home-page',
   templateUrl: './json-home-page.component.html',
-  styleUrls: ['./json-home-page.component.scss']
+  styleUrls: ['./json-home-page.component.scss'],
 })
 export class JsonHomePageComponent implements OnInit, OnDestroy {
   // VAR
@@ -138,7 +138,7 @@ export class JsonHomePageComponent implements OnInit, OnDestroy {
     console.log(this.yPostion);
     if (this.yPostion >= this.maxYPostion) {
       console.log(this.yPostion);
-      this.maxYPostion += this.innerHeight+500;
+      this.maxYPostion += this.innerHeight + 500;
       this.loadedPostId += 5;
     }
   }
@@ -152,7 +152,7 @@ export class JsonHomePageComponent implements OnInit, OnDestroy {
   }
   private getHeight() {
     this.innerHeight = window.innerHeight;
-    this.maxYPostion = this.innerHeight-100;
+    this.maxYPostion = this.innerHeight - 100;
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

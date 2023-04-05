@@ -6,17 +6,9 @@ import { CommonModule } from '@angular/common';
 import { NgxGithubSecurityRoutingModule } from './ngx-github-security-routing.module';
 import { NgxGithubSecurityComponent } from './ngx-github-security.component';
 
-
 @NgModule({
-  declarations: [
-    NgxGithubSecurityComponent
-  ],
-  exports: [
-    NgxGithubSecurityComponent,
-  ],
-  imports: [
-    CommonModule,
-    NgxGithubSecurityRoutingModule
-  ]
+  declarations: [NgxGithubSecurityComponent],
+  exports: [NgxGithubSecurityComponent],
+  imports: [CommonModule, NgxGithubSecurityRoutingModule],
 })
-export class NgxGithubSecurityModule { }
+export class NgxGithubSecurityModule {}

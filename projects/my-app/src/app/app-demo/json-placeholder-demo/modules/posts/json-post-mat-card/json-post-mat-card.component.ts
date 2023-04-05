@@ -10,7 +10,7 @@ import { JSONPost } from '../../../models/json-post.model';
 @Component({
   selector: 'app-json-post-mat-card',
   templateUrl: './json-post-mat-card.component.html',
-  styleUrls: ['./json-post-mat-card.component.scss']
+  styleUrls: ['./json-post-mat-card.component.scss'],
 })
 export class JsonPostMatCardComponent {
   //ENUMS
@@ -35,8 +35,7 @@ export class JsonPostMatCardComponent {
     return !!this.avatarUrl ? this.avatarUrl : this.defaultAvatarUrl;
   }
 
-  private defaultAvatarUrl: string =
-  "assets/img/demo/avatars/noavatar.png";;
+  private defaultAvatarUrl: string = 'assets/img/demo/avatars/noavatar.png';
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 

@@ -2,10 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // API
-import {
-  AngularMaterialIconCodeENUM,
-  TranslateKeyENUM,
-} from 'my-library';
+import { AngularMaterialIconCodeENUM, TranslateKeyENUM } from 'my-library';
 
 @Component({
   selector: 'app-ngx-github-repo-details',

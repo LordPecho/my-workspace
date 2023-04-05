@@ -3,11 +3,10 @@ import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class JsonAddressService {
-
-  constructor() { }
+  constructor() {}
 
   public formGroup(): FormGroup {
     return new FormBuilder().group({

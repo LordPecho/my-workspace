@@ -11,17 +11,13 @@ import { JsonTodoCdkDropListModule } from '../../todos/json-todo-cdk-drop-list/j
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [
-    JsonUserTodosComponent
-  ],
-  exports:[
-    JsonUserTodosComponent,
-  ],
+  declarations: [JsonUserTodosComponent],
+  exports: [JsonUserTodosComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
     JsonTodoCdkDropListModule,
-    JsonUserTodosRoutingModule
-  ]
+    JsonUserTodosRoutingModule,
+  ],
 })
-export class JsonUserTodosModule { }
+export class JsonUserTodosModule {}

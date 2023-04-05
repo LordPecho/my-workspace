@@ -18,7 +18,6 @@ import { map, Subscription, switchMap } from 'rxjs';
 import {
   IDataTableColumn,
   isEmptyObjectValues,
-  updateObject,
 } from 'my-library';
 import { JSONUser } from '../../../models/json-user.model';
 import { JsonAlbumService } from '../../../services/json-album.service';
@@ -31,7 +30,7 @@ import { JsonAlbumMatTableComponent } from '../../albums/json-album-mat-table/js
   templateUrl: './json-user-album.component.html',
   styleUrls: ['./json-user-album.component.scss'],
 })
-export class JsonUserAlbumComponent implements OnInit, OnDestroy {
+export class JsonUserAlbumComponent implements OnInit, OnDestroy, OnChanges {
   public queryParamsFormGroup: FormGroup = new FormBuilder().group({
     userId: [null],
   });

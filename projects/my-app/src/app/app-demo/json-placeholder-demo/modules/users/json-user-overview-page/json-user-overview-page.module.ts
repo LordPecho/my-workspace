@@ -5,15 +5,12 @@ import { JsonUserOverviewPageRoutingModule } from './json-user-overview-page-rou
 import { JsonUserOverviewPageComponent } from './json-user-overview-page.component';
 import { JsonUserMatTableModule } from '../json-user-mat-table/json-user-mat-table.module';
 
-
 @NgModule({
-  declarations: [
-    JsonUserOverviewPageComponent
-  ],
+  declarations: [JsonUserOverviewPageComponent],
   imports: [
     CommonModule,
     JsonUserMatTableModule,
-    JsonUserOverviewPageRoutingModule
-  ]
+    JsonUserOverviewPageRoutingModule,
+  ],
 })
-export class JsonUserOverviewPageModule { }
+export class JsonUserOverviewPageModule {}

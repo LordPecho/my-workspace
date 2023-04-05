@@ -14,18 +14,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [
-    JsonTodoCdkDropListComponent
-  ],
-  exports: [
-    JsonTodoCdkDropListComponent,
-  ],
+  declarations: [JsonTodoCdkDropListComponent],
+  exports: [JsonTodoCdkDropListComponent],
   imports: [
     CommonModule,
     TranslateModule,
     FlexLayoutModule,
     DragDropModule,
-    JsonTodoCdkDropListRoutingModule
-  ]
+    JsonTodoCdkDropListRoutingModule,
+  ],
 })
-export class JsonTodoCdkDropListModule { }
+export class JsonTodoCdkDropListModule {}

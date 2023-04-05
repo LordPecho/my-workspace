@@ -4,11 +4,10 @@ import { Component, Input } from '@angular/core';
 // API
 import { JSONPost } from '../../../models/json-post.model';
 
-
 @Component({
   selector: 'app-json-posts',
   templateUrl: './json-posts.component.html',
-  styleUrls: ['./json-posts.component.scss']
+  styleUrls: ['./json-posts.component.scss'],
 })
 export class JsonPostsComponent {
   @Input() data: any[] = [];

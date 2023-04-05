@@ -15,12 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 @NgModule({
-  declarations: [
-    JsonCommentsComponent
-  ],
-  exports: [
-    JsonCommentsComponent
-  ],
+  declarations: [JsonCommentsComponent],
+  exports: [JsonCommentsComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -28,7 +24,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    JsonCommentsRoutingModule
-  ]
+    JsonCommentsRoutingModule,
+  ],
 })
-export class JsonCommentsModule { }
+export class JsonCommentsModule {}

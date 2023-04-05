@@ -24,9 +24,9 @@ import { JsonAlbumMatTableComponent } from '../../albums/json-album-mat-table/js
 @Component({
   selector: 'app-json-album-library-page',
   templateUrl: './json-album-library-page.component.html',
-  styleUrls: ['./json-album-library-page.component.scss']
+  styleUrls: ['./json-album-library-page.component.scss'],
 })
-export class JsonAlbumLibraryPageComponent implements OnInit,OnDestroy {
+export class JsonAlbumLibraryPageComponent implements OnInit, OnDestroy {
   // VAR
   public queryParamsFormGroup: FormGroup = new FormBuilder().group({
     userId: [null],
@@ -36,8 +36,10 @@ export class JsonAlbumLibraryPageComponent implements OnInit,OnDestroy {
   // DATA TABLE
   public data?: JSONAlbum[] = [];
   public dataSource: MatTableDataSource<JSONAlbum> = new MatTableDataSource([]);
-  public tableColumns: IDataTableColumn[] = this.jsonAlbumService.dataTableColumns();
-  @ViewChild('jsonAlbumMatTable') public jsonAlbumMatTable: JsonAlbumMatTableComponent;
+  public tableColumns: IDataTableColumn[] =
+    this.jsonAlbumService.dataTableColumns();
+  @ViewChild('jsonAlbumMatTable')
+  public jsonAlbumMatTable: JsonAlbumMatTableComponent;
 
   // FORM CONTROLS
   public filterFormControl?: FormControl = new FormControl();
@@ -110,15 +112,13 @@ export class JsonAlbumLibraryPageComponent implements OnInit,OnDestroy {
   public childEventEmitter($event: IEvent): void {
     switch ($event.type) {
       case EventTypeENUM.NAVIGATE:
-
         return;
       default:
-
         return;
     }
   }
 
-  nav(item: any){
+  nav(item: any) {
     this.router.navigate(item);
   }
   ngOnDestroy(): void {

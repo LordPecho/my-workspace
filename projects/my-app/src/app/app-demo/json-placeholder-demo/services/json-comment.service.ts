@@ -13,24 +13,25 @@ import { setHttpParams } from 'my-library';
 import { JSONComment, IJSONComment } from '../models/json-comment.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class JsonCommentService {
-  constructor( private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
-  public getComments(queryParams?: any): Observable<JSONComment[]>{
+  public getComments(queryParams?: any): Observable<JSONComment[]> {
     const params = setHttpParams(queryParams);
     return this.httpClient
-    .get<JSONComment[]>(environment.jsonPlaceholder.apiUrl + 'comments', { params })
-    .pipe(
-      map((data: IJSONComment[]) => {
-        const sanitizedData: JSONComment[] = [];
-        data.forEach((item: IJSONComment) => {
-          sanitizedData.push(new JSONComment(item));
-        });
-        return sanitizedData;
+      .get<JSONComment[]>(environment.jsonPlaceholder.apiUrl + 'comments', {
+        params,
       })
-    );
+      .pipe(
+        map((data: IJSONComment[]) => {
+          const sanitizedData: JSONComment[] = [];
+          data.forEach((item: IJSONComment) => {
+            sanitizedData.push(new JSONComment(item));
+          });
+          return sanitizedData;
+        })
+      );
   }
-
 }

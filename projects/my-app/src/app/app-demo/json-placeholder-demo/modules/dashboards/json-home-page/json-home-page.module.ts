@@ -12,9 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 
 // MODULE
-import {
-  FilterInputFormControlModule,
-} from 'my-library';
+import { FilterInputFormControlModule } from 'my-library';
 import { JsonPostsModule } from '../../posts/json-posts/json-posts.module';
 
 // MATERIAL
@@ -24,21 +22,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [
-    JsonHomePageComponent
-  ],
+  declarations: [JsonHomePageComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     TranslateModule,
     FlexLayoutModule,
     FilterInputFormControlModule,
+    MatInputModule,
     JsonPostsModule,
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
     MatInputModule,
-    JsonHomePageRoutingModule
-  ]
+    JsonHomePageRoutingModule,
+  ],
 })
-export class JsonHomePageModule { }
+export class JsonHomePageModule {}

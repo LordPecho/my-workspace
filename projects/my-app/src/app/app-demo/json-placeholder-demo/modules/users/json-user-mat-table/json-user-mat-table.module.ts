@@ -22,12 +22,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [
-    JsonUserMatTableComponent
-  ],
-  exports: [
-    JsonUserMatTableComponent
-  ],
+  declarations: [JsonUserMatTableComponent],
+  exports: [JsonUserMatTableComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -42,7 +38,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MatPaginatorModule,
     MatTableModule,
     TranslateModule,
-    JsonUserMatTableRoutingModule
-  ]
+    JsonUserMatTableRoutingModule,
+  ],
 })
-export class JsonUserMatTableModule { }
+export class JsonUserMatTableModule {}

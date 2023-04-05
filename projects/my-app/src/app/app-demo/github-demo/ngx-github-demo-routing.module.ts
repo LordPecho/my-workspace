@@ -8,12 +8,12 @@ import { NgxGithubDemoComponent } from './ngx-github-demo.component';
 const routes: Routes = [
   {
     path: '',
-    component: NgxGithubDemoComponent
-  }
+    component: NgxGithubDemoComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class NgxGithubDemoRoutingModule { }
+export class NgxGithubDemoRoutingModule {}

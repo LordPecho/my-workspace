@@ -15,14 +15,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-
 @NgModule({
-  declarations: [
-    JsonAddressFormGroupComponent
-  ],
-  exports: [
-    JsonAddressFormGroupComponent
-  ],
+  declarations: [JsonAddressFormGroupComponent],
+  exports: [JsonAddressFormGroupComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -30,7 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    JsonAddressFormGroupRoutingModule
-  ]
+    JsonAddressFormGroupRoutingModule,
+  ],
 })
-export class JsonAddressFormGroupModule { }
+export class JsonAddressFormGroupModule {}

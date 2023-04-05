@@ -11,20 +11,18 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // MATERIAL
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { NgxGithubRepoDetailsModule } from './modules/ngx-github-repo-details/ngx-github-repo-details.module';
 
 @NgModule({
-  declarations: [
-    NgxGithubDemoComponent,
-  ],
+  declarations: [NgxGithubDemoComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
     TranslateModule,
     MatListModule,
     NgxGithubRepoDetailsModule,
-    NgxGithubDemoRoutingModule
-  ]
+    NgxGithubDemoRoutingModule,
+  ],
 })
-export class NgxGithubDemoModule { }
+export class NgxGithubDemoModule {}

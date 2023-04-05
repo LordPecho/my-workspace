@@ -13,12 +13,10 @@ import { IJSONTodo, JSONTodo } from '../models/json-todo.model';
 import { setHttpParams } from 'my-library';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class JsonTodoService {
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   public getTodos(queryParams?: any): Observable<JSONTodo[]> {
     const params: HttpParams = setHttpParams(queryParams);
@@ -34,5 +32,4 @@ export class JsonTodoService {
         })
       );
   }
-
 }

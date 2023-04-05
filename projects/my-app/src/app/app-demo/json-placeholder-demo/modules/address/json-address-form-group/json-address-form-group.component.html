@@ -1,40 +1,74 @@
 <div>
-    <form [formGroup]="dataFormGroup">
-        <div>
-            <div fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-                <mat-form-field fxFlex="60">
-                    <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_STREET | translate}}</mat-label>
-                    <input matInput [formControlName]="'street'">
-                </mat-form-field>
-                <mat-form-field fxFlex="40">
-                    <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_SUITE | translate}}</mat-label>
-                    <input matInput [formControlName]="'suite'">
-                </mat-form-field>
-            </div>
-        </div>
-        <div>
-            <div fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-                <mat-form-field fxFlex="60">
-                    <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_CITY | translate}}</mat-label>
-                    <input matInput [formControlName]="'city'">
-                </mat-form-field>
-                <mat-form-field fxFlex="40">
-                    <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_ZIPCODE | translate}}</mat-label>
-                    <input matInput [formControlName]="'zipcode'">
-                </mat-form-field>
-            </div>
-        </div>
-        <div>
-            <div [formGroupName]="'geo'" fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-                <mat-form-field fxFlex="50">
-                    <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_LATITUDE | translate}}</mat-label>
-                    <input matInput [formControlName]="'lat'">
-                </mat-form-field>
-                <mat-form-field fxFlex="50">
-                    <mat-label>{{ngxTranslateKeyENUM.COMMON_LABEL_LONGITUDE | translate}}</mat-label>
-                    <input matInput [formControlName]="'lng'">
-                </mat-form-field>
-            </div>
-        </div>
-    </form>
+  <form [formGroup]="dataFormGroup">
+    <div>
+      <div
+        fxFlex="100"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayout.sm="column"
+        fxLayout.md="row"
+        fxLayoutGap="16px"
+      >
+        <mat-form-field fxFlex="60">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_STREET | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'street'" />
+        </mat-form-field>
+        <mat-form-field fxFlex="40">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_SUITE | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'suite'" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <div
+        fxFlex="100"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayout.sm="column"
+        fxLayout.md="row"
+        fxLayoutGap="16px"
+      >
+        <mat-form-field fxFlex="60">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_CITY | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'city'" />
+        </mat-form-field>
+        <mat-form-field fxFlex="40">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_ZIPCODE | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'zipcode'" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <div
+        [formGroupName]="'geo'"
+        fxFlex="100"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayout.sm="column"
+        fxLayout.md="row"
+        fxLayoutGap="16px"
+      >
+        <mat-form-field fxFlex="50">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_LATITUDE | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'lat'" />
+        </mat-form-field>
+        <mat-form-field fxFlex="50">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMMON_LABEL_LONGITUDE | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'lng'" />
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
 </div>

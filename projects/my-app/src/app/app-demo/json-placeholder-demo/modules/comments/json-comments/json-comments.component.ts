@@ -1,5 +1,5 @@
 // ANGULAR
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 // API
 import { JSONComment } from '../../../models/json-comment.model';
@@ -8,7 +8,7 @@ import { AngularMaterialIconCodeENUM } from 'my-library';
 @Component({
   selector: 'app-json-comments',
   templateUrl: './json-comments.component.html',
-  styleUrls: ['./json-comments.component.scss']
+  styleUrls: ['./json-comments.component.scss'],
 })
 export class JsonCommentsComponent {
   // ENUMS
@@ -25,8 +25,7 @@ export class JsonCommentsComponent {
     return !!this.avatarUrl ? this.avatarUrl : this.defaultAvatarUrl;
   }
 
-  private defaultAvatarUrl: string =
-  "assets/img/demo/avatars/noavatar.png";;
+  private defaultAvatarUrl: string = 'assets/img/demo/avatars/noavatar.png';
 
   constructor() {}
 

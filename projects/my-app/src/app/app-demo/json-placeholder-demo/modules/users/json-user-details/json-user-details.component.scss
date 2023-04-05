@@ -11,7 +11,7 @@
   width: 75%;
   height: 75%;
   border-radius: 50%;
-  margin-right: 10px;
+  margin: 15px;
 }
 .value {
   margin-top: 20px;
@@ -22,6 +22,8 @@
   font-size: 30px;
   font-weight: 600;
   padding-bottom: 20px;
+  margin: 5px;
+  margin-top: 25px;
 }
 .json-user-details{
   padding-top: 50px;
@@ -30,7 +32,25 @@
 .icon{
   vertical-align: middle;
 }
-
+.album-list, .todo-list{
+  margin: 50px;
+}
+@media screen and (min-width: 1500px) {
+  .avatar {
+    margin: 50px;
+    width: 60%;
+    height: 60%;
+  }
+  .user-name{
+    margin-top: 50px;
+  }
+  .name {
+    margin-top: 50px;
+  }
+  .value{
+    margin-top: 50px;
+  }
+}
 @media screen and (max-width: 1400px) {
   .value {
     margin-top: 32px;

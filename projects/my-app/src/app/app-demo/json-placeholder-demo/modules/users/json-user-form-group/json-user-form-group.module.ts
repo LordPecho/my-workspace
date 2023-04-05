@@ -20,12 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  declarations: [
-    JsonUserFormGroupComponent
-  ],
-  exports:[
-    JsonUserFormGroupComponent
-  ],
+  declarations: [JsonUserFormGroupComponent],
+  exports: [JsonUserFormGroupComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -35,7 +31,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     JsonCompanyFormGroupModule,
     JsonAddressFormGroupModule,
-    JsonUserFormGroupRoutingModule
-  ]
+    JsonUserFormGroupRoutingModule,
+  ],
 })
-export class JsonUserFormGroupModule { }
+export class JsonUserFormGroupModule {}

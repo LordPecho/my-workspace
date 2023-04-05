@@ -8,7 +8,6 @@ import { TranslateKeyENUM } from 'my-library';
 
 // API
 
-
 @Component({
   selector: 'json-address-form-group',
   templateUrl: './json-address-form-group.component.html',

@@ -1,24 +1,48 @@
 <div class="json-company-form-group">
-    <form [formGroup]="dataFormGroup">
-        <div>
-            <div fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-                <mat-form-field fxFlex="33">
-                    <mat-label>{{ngxTranslateKeyENUM.COMPANY_LABEL_NAME | translate}}</mat-label>
-                    <input matInput [formControlName]="'name'">
-                </mat-form-field>
-                <mat-form-field fxFlex="33">
-                    <mat-label>{{ngxTranslateKeyENUM.COMPANY_LABEL_BS | translate}}</mat-label>
-                    <input matInput [formControlName]="'bs'">
-                </mat-form-field>
-            </div>
-        </div>
-        <div>
-            <div fxFlex="100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="16px">
-                <mat-form-field fxFlex="66">
-                    <mat-label>{{ngxTranslateKeyENUM.COMPANY_LABEL_CATCH_PHRASE | translate}}</mat-label>
-                    <textarea [cols]="2" matInput [formControlName]="'catchPhrase'"></textarea>
-                </mat-form-field>
-            </div>
-        </div>
-    </form>
+  <form [formGroup]="dataFormGroup">
+    <div>
+      <div
+        fxFlex="100"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayout.sm="column"
+        fxLayout.md="row"
+        fxLayoutGap="16px"
+      >
+        <mat-form-field fxFlex="33">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMPANY_LABEL_NAME | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'name'" />
+        </mat-form-field>
+        <mat-form-field fxFlex="33">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMPANY_LABEL_BS | translate
+          }}</mat-label>
+          <input matInput [formControlName]="'bs'" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <div
+        fxFlex="100"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayout.sm="column"
+        fxLayout.md="row"
+        fxLayoutGap="16px"
+      >
+        <mat-form-field fxFlex="66">
+          <mat-label>{{
+            ngxTranslateKeyENUM.COMPANY_LABEL_CATCH_PHRASE | translate
+          }}</mat-label>
+          <textarea
+            [cols]="2"
+            matInput
+            [formControlName]="'catchPhrase'"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
 </div>

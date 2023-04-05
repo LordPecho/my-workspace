@@ -9,18 +9,13 @@ import { JsonAlbumDetailsComponent } from './json-album-details.component';
 // MODULE
 import { JsonPhotoGalleryModule } from '../../photos/json-photo-gallery/json-photo-gallery.module';
 
-
 @NgModule({
-  declarations: [
-    JsonAlbumDetailsComponent
-  ],
-  exports: [
-    JsonAlbumDetailsComponent
-  ],
+  declarations: [JsonAlbumDetailsComponent],
+  exports: [JsonAlbumDetailsComponent],
   imports: [
     CommonModule,
     JsonPhotoGalleryModule,
-    JsonAlbumDetailsRoutingModule
-  ]
+    JsonAlbumDetailsRoutingModule,
+  ],
 })
-export class JsonAlbumDetailsModule { }
+export class JsonAlbumDetailsModule {}

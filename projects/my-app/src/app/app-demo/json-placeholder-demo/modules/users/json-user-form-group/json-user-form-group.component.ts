@@ -11,7 +11,7 @@ import { JsonUserService } from '../../../services/json-user.service';
 @Component({
   selector: 'app-json-user-form-group',
   templateUrl: './json-user-form-group.component.html',
-  styleUrls: ['./json-user-form-group.component.scss']
+  styleUrls: ['./json-user-form-group.component.scss'],
 })
 export class JsonUserFormGroupComponent {
   // ENUMS
@@ -41,5 +41,4 @@ export class JsonUserFormGroupComponent {
   constructor(private jsonUserService: JsonUserService) {}
 
   ngOnInit(): void {}
-
 }

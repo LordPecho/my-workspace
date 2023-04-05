@@ -15,14 +15,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-
 @NgModule({
-  declarations: [
-    JsonCompanyFormGroupComponent
-  ],
-  exports: [
-    JsonCompanyFormGroupComponent
-  ],
+  declarations: [JsonCompanyFormGroupComponent],
+  exports: [JsonCompanyFormGroupComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -30,7 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    JsonCompanyFormGroupRoutingModule
-  ]
+    JsonCompanyFormGroupRoutingModule,
+  ],
 })
-export class JsonCompanyFormGroupModule { }
+export class JsonCompanyFormGroupModule {}

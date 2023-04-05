@@ -7,10 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./json-album-details.component.scss'],
 })
 export class JsonAlbumDetailsComponent {
-
   @Input() public images: {
     title: string;
     src: string;
   }[] = [];
-
 }

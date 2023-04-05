@@ -10,16 +10,13 @@ import { JsonUserCrudPageComponent } from './json-user-crud-page.component';
 import { JsonUserDetailsModule } from '../json-user-details/json-user-details.module';
 import { JsonUserFormGroupModule } from '../json-user-form-group/json-user-form-group.module';
 
-
 @NgModule({
-  declarations: [
-    JsonUserCrudPageComponent
-  ],
+  declarations: [JsonUserCrudPageComponent],
   imports: [
     CommonModule,
     JsonUserDetailsModule,
     JsonUserFormGroupModule,
-    JsonUserCrudPageRoutingModule
-  ]
+    JsonUserCrudPageRoutingModule,
+  ],
 })
-export class JsonUserCrudPageModule { }
+export class JsonUserCrudPageModule {}

@@ -8,6 +8,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class JsonUserFormGroupRoutingModule { }
+export class JsonUserFormGroupRoutingModule {}

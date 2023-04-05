@@ -13,7 +13,7 @@ import { JSONPhoto } from '../../../models/json-photo.model';
 @Component({
   selector: 'app-json-album-crud-page',
   templateUrl: './json-album-crud-page.component.html',
-  styleUrls: ['./json-album-crud-page.component.scss']
+  styleUrls: ['./json-album-crud-page.component.scss'],
 })
 export class JsonAlbumCrudPageComponent implements OnInit, OnDestroy {
   public albumId: number;
@@ -54,7 +54,7 @@ export class JsonAlbumCrudPageComponent implements OnInit, OnDestroy {
             this.images.push({
               title: photo.title,
               src: photo.url,
-            })
+            });
           });
         })
     );

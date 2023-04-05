@@ -19,12 +19,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgxGithubTabsModule } from '../ngx-github-tabs/ngx-github-tabs.module';
 
 @NgModule({
-  declarations: [
-    NgxGithubRepoDetailsComponent
-  ],
-  exports: [
-    NgxGithubRepoDetailsComponent
-  ],
+  declarations: [NgxGithubRepoDetailsComponent],
+  exports: [NgxGithubRepoDetailsComponent],
   imports: [
     CommonModule,
     TranslateModule,
@@ -33,7 +29,7 @@ import { NgxGithubTabsModule } from '../ngx-github-tabs/ngx-github-tabs.module';
     MatButtonModule,
     MatTabsModule,
     NgxGithubTabsModule,
-    NgxGithubRepoDetailsRoutingModule
-  ]
+    NgxGithubRepoDetailsRoutingModule,
+  ],
 })
-export class NgxGithubRepoDetailsModule { }
+export class NgxGithubRepoDetailsModule {}
