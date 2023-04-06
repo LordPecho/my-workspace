@@ -1,6 +1,6 @@
-<div class="items-container" fxLayout="row" fxLayoutAlign="center">
-  <span class="items" fxFlex="50">
-    <mat-card class="header-card" fxLayout="row" fxLayoutAlign="start center">
+<div class="items-container" fxLayout="row" fxLayoutAlign="center" >
+  <span class="items" fxFlex="50" >
+    <mat-card class="header-card" fxLayout="row" fxLayoutAlign="start center" >
       <span><mat-checkbox (change)="changeChecked()"></mat-checkbox></span>
       <button class="button-open" mat-button (click)="changeState('open')">
         <mat-icon>{{ openIcon }}</mat-icon>
@@ -32,8 +32,6 @@
                 type="text"
                 autocomplete="off"
               />
-
-
             </mat-option>
             <mat-option
               *ngFor="let user of filteredUserList"
@@ -57,6 +55,7 @@
           class="item-card"
           fxLayout="row"
           fxLayoutAlign="start center"
+
         >
           <div class="card-checkbox">
             <mat-checkbox [checked]="isChecked"></mat-checkbox>
@@ -107,6 +106,7 @@
       fxLayoutAlign="center center"
       class="no-opened-requests-container"
       *ngIf="noOpen"
+
     >
       <div class="icon">
         <mat-icon>{{ openIcon }}</mat-icon>

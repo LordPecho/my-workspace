@@ -9,7 +9,6 @@ import { NgxGithubIssuesComponent } from './ngx-github-issues.component';
 // MODULES
 import { NgxGithubListCardModule } from '../ngx-github-list-card/ngx-github-list-card.module';
 
-
 @NgModule({
   declarations: [NgxGithubIssuesComponent],
   exports: [NgxGithubIssuesComponent],

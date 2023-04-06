@@ -20,6 +20,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LayoutModule } from './modules/layout/layout.module';
 import { JsonLayoutModule } from './app-demo/json-placeholder-demo/modules/dashboards/json-layout/json-layout.module';
 import { MatSelectModule } from '@angular/material/select';
+import { EStoreLayoutModule } from './app-demo/e-store-demo/modules/dashboards/e-store-layout/e-store-layout.module';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -34,6 +35,7 @@ export function createTranslateLoader(http: HttpClient) {
     MatSelectModule,
     LayoutModule,
     JsonLayoutModule,
+    EStoreLayoutModule,
     //TRANSLATE
     TranslateModule.forRoot({
       loader: {

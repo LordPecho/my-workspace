@@ -1,7 +1,5 @@
 //ANGULAR
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
-//ROUTER
 import { Router } from '@angular/router';
 
 @Component({

@@ -29,9 +29,9 @@ export class LayoutComponent implements OnInit {
       routerLink: ['/', 'github'],
     },
     {
-      title: 'main-nav.button-1.item',
-      icon: 'bug_report',
-      routerLink: ['/', 'item'],
+      title: 'main-nav.e-store',
+      icon: 'shop',
+      routerLink: ['/', 'e-store'],
     },
   ];
   constructor(private router: Router) {}

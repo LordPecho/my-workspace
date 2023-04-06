@@ -1,11 +1,10 @@
-//ANGULAR
+// ANGULAR
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-//API
-import { JsonLayoutRoutingModule } from './json-layout-routing.module';
-import { JsonLayoutComponent } from './json-layout.component';
-
+// API
+import { EStoreLayoutRoutingModule } from './e-store-layout-routing.module';
+import { EStoreLayoutComponent } from './e-store-layout.component';
 
 //MATERIAL
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,11 +16,16 @@ import { FormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 // 3lib MODULE
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [JsonLayoutComponent],
+  declarations: [
+    EStoreLayoutComponent
+  ],
+  exports: [
+    EStoreLayoutComponent
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -33,8 +37,7 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     TranslateModule,
     FlexLayoutModule,
-    JsonLayoutRoutingModule,
-  ],
-  exports: [JsonLayoutComponent],
+    EStoreLayoutRoutingModule
+  ]
 })
-export class JsonLayoutModule {}
+export class EStoreLayoutModule { }

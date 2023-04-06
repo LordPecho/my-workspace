@@ -53,8 +53,10 @@ export class NgxGithubListCardComponent implements OnInit {
     this.subscription.add(
       this.filterFormControl.valueChanges.subscribe((item) => {
         this.filteredUserList = this.userList.filter((user: NGXGithubUser) => {
-          return user.login.toLowerCase().includes(!!item ? item.toLowerCase() : '' );
-        })
+          return user.login
+            .toLowerCase()
+            .includes(!!item ? item.toLowerCase() : '');
+        });
       })
     );
   }
@@ -65,16 +67,12 @@ export class NgxGithubListCardComponent implements OnInit {
     console.log(this.currentUserSelected);
   }
   public filter(user: string) {
-    if (
-      this.currentUserSelected.length === 0
-    ) {
+    if (this.currentUserSelected.length === 0) {
       return true;
     } else {
-
-      if(this.currentUserSelected.includes(user))
-      return true;
-      else{
-      return false;
+      if (this.currentUserSelected.includes(user)) return true;
+      else {
+        return false;
       }
     }
   }

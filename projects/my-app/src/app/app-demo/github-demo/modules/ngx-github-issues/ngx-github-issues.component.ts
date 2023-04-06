@@ -25,7 +25,6 @@ export class NgxGithubIssuesComponent implements OnInit, OnDestroy {
   public get ngxIconCodeENUM(): typeof AngularMaterialIconCodeENUM {
     return AngularMaterialIconCodeENUM;
   }
-
   // VAR
   public issues: NGXGithubIssues[] = [];
   public openedRequests: number = 0;

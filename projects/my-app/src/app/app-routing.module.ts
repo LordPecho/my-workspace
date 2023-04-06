@@ -7,6 +7,8 @@ import { LayoutComponent } from './modules/layout/layout.component';
 import { JsonLayoutComponent } from './app-demo/json-placeholder-demo/modules/dashboards/json-layout/json-layout.component';
 import { MyHomePageComponent } from './modules/my-home-page/my-home-page.component';
 import { NgxGithubDemoComponent } from './app-demo/github-demo/ngx-github-demo.component';
+import { EStoreDemoComponent } from './app-demo/e-store-demo/e-store-demo.component';
+import { EStoreLayoutComponent } from './app-demo/e-store-demo/modules/dashboards/e-store-layout/e-store-layout.component';
 
 const routes: Routes = [
   {
@@ -68,6 +70,33 @@ const routes: Routes = [
           import('./app-demo/github-demo/ngx-github-demo.module').then(
             (m) => m.NgxGithubDemoModule
           ),
+      },
+      {
+        component: EStoreLayoutComponent,
+        path: 'e-store',
+        children: [
+          {
+            path:'shop',
+            loadChildren: () =>
+            import('./app-demo/e-store-demo/modules/shop/e-store-shop-page/e-store-shop-page.module').then(
+              (m) => m.EStoreShopPageModule
+            ),
+          },
+          {
+            path:'cart',
+            loadChildren: () =>
+            import('./app-demo/e-store-demo/modules/cart/e-store-cart-page/e-store-cart-page.module').then(
+              (m) => m.EStoreCartPageModule
+            ),
+          },
+          {
+            path:'',
+            loadChildren: () =>
+            import('./app-demo/e-store-demo/modules/dashboards/e-store-home-page/e-store-home-page.module').then(
+              (m) => m.EStoreHomePageModule
+            ),
+          }
+        ]
       },
       {
         component: MyHomePageComponent,
