@@ -11,6 +11,9 @@ export const devEnvironmentConfig: IEnvironment | any = {
     ngxGithubDemo: {
       apiUrl: 'https://api.github.com'
     },
+    eStoreDemo: {
+      apiUrl: 'https://fakestoreapi.com'
+    },
     production: false,
     apiUrl: '',
     apiUrlWss: '',
