@@ -21,6 +21,7 @@ import { LayoutModule } from './modules/layout/layout.module';
 import { JsonLayoutModule } from './app-demo/json-placeholder-demo/modules/dashboards/json-layout/json-layout.module';
 import { MatSelectModule } from '@angular/material/select';
 import { EStoreLayoutModule } from './app-demo/e-store-demo/modules/dashboards/e-store-layout/e-store-layout.module';
+import { ESTORE_SERVICES_API } from './app-demo/e-store-demo/services/index.service';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -49,8 +50,11 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
     { provide: Window, useValue: window },
+
+    // SERVICES
     JSON_SERVICES_API,
     GITHUB_SERVICES_API,
+    ESTORE_SERVICES_API,
   ],
   bootstrap: [AppComponent],
 })
