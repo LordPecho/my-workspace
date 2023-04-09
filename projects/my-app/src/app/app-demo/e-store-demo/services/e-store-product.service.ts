@@ -20,10 +20,20 @@ export class EStoreProductService {
     private httpClient: HttpClient,
   ) { }
 
-    //GET ALL
-    public getProducts(): Observable<IEStoreProduct[]> {
-      return this.httpClient
-        .get<IEStoreProduct[]>(environment.eStoreDemo.apiUrl + 'products')
+  //GET ALL
+  public getProducts(catogories?: string[]): Observable<IEStoreProduct[]> {
+
+    //GET PRODUCT BY CATEGORY
+      // if(!!catogories){
+      //   catogories.forEach(()=>{
+
+      //   })
+      // }
+      // else{
+      // }
+
+        return this.httpClient
+        .get<IEStoreProduct[]>(environment.eStoreDemo.apiUrl + '/products')
         .pipe(
           map((data: IEStoreProduct[]) => {
             const sanitizedData: IEStoreProduct[] = [];
@@ -32,13 +42,20 @@ export class EStoreProductService {
             });
             return sanitizedData;
           })
-        );
+          );
     }
 
     // GET PRODUCT BY ID
     public getProduct(productId: string): Observable<IEStoreProduct> {
       return this.httpClient.get<IEStoreProduct>(
-        environment.eStoreDemo.apiUrl + 'products' + '/' + productId
+        environment.eStoreDemo.apiUrl + '/products' + '/' + productId
+      );
+    }
+
+    // GET CATEGORIES
+    public getProductCategories(): Observable<string[]> {
+      return this.httpClient.get<string[]>(
+        environment.eStoreDemo.apiUrl + '/products/categories'
       );
     }
 

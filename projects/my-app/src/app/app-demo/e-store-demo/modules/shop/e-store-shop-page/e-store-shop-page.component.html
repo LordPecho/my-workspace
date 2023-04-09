@@ -1,1 +1,40 @@
-<p>e-store-shop-page works!</p>
+<!-- TO DO:
+   SORTING -->
+
+   SORT BY CATEGORY
+<div>
+  <mat-select>
+    <mat-option *ngFor="let category of categories" [value]="category">
+      {{ category }}
+    </mat-option>
+  </mat-select>
+</div>
+
+<mat-form-field appearance="fill">
+  <mat-label>Categories</mat-label>
+  <mat-select [formControl]="cats" (valueChange)="selectCategory($event)">
+  <!-- <mat-select [formControl]="cats" multiple (valueChange)="check($event)"> -->
+    <!-- <mat-select-trigger>
+      {{cats.value?.[0] || ''}}
+      <span *ngIf="(cats.value?.length || 0) > 1" class="example-additional-selection">
+        (+{{(cats.value?.length || 0) - 1}} {{cats.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger> -->
+    <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div *ngFor="let item of categories">
+  {{ item }}
+</div>
+<!-- TO DO:
+PRODUCT VIEW -->
+PRODUCTS:
+<div *ngFor="let item of data">
+
+  <div *ngIf="checkCategory(item.category)">
+
+    {{ item.title }}
+
+  </div>
+</div>
