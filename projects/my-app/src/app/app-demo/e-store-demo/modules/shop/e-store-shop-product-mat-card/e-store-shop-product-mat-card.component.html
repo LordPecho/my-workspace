@@ -1,17 +1,31 @@
-<mat-card class="example-card">
+<mat-card class="product-card">
   <img
-    style="width: 80%; height: 80%;position: relative; left: 10%;"
+    class="product-image"
     mat-card-image
     [attr.src]="data.image"
     alt="Product Image"
   />
-  <mat-card-title style="text-align: center;">
+  <mat-card-title class="product-title-container" style="text-align: center">
     <p>
-      {{data.title}}
+      {{ data.title }}
     </p>
   </mat-card-title>
-  <mat-card-content style="text-align: center;">
-    <div>{{data.rating.rate}} / {{data.rating.count}}</div>
-    <p>{{data.price}}</p>
+  <mat-card-content
+    class="product-content-container"
+    style="text-align: center"
+  >
+    <div>{{ data.rating.rate }} / {{ data.rating.count }}</div>
+    <p>{{ data.price }}$</p>
   </mat-card-content>
+  <mat-card-actions
+    class="product-actions-container"
+    fxLayout="row"
+    fxLayoutAlign="space-around center"
+  >
+    <button mat-flat-button fxFlex="20">BUY</button>
+    <span fxFlex="60">
+      <!-- SPACE FILLER -->
+    </span>
+    <button mat-flat-button fxFlex="20">DETAILS</button>
+  </mat-card-actions>
 </mat-card>
