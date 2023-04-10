@@ -1,1 +1,17 @@
-<p>e-store-shop-product-mat-card works!</p>
+<mat-card class="example-card">
+  <img
+    style="width: 80%; height: 80%;position: relative; left: 10%;"
+    mat-card-image
+    [attr.src]="data.image"
+    alt="Product Image"
+  />
+  <mat-card-title style="text-align: center;">
+    <p>
+      {{data.title}}
+    </p>
+  </mat-card-title>
+  <mat-card-content style="text-align: center;">
+    <div>{{data.rating.rate}} / {{data.rating.count}}</div>
+    <p>{{data.price}}</p>
+  </mat-card-content>
+</mat-card>

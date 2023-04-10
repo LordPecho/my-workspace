@@ -20,6 +20,7 @@ PRODUCT VIEW -->
 PRODUCTS:
 <div *ngFor="let item of data">
   <div *ngIf="checkCategory(item.category)">
-    {{ item.title }}
+    <app-e-store-shop-product-mat-card [data]="item">
+    </app-e-store-shop-product-mat-card>
   </div>
 </div>

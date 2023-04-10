@@ -13,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 // MODULE
 import { FilterInputFormControlModule } from 'my-library';
+import { EStoreShopProductMatCardModule } from '../e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
 
 // MATERIAL
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -29,7 +30,7 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     TranslateModule,
     FlexLayoutModule,
-    FilterInputFormControlModule,
+    EStoreShopProductMatCardModule,
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
