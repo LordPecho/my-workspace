@@ -1,20 +1,44 @@
-<p>
-  {{data?.category}}
-</p>
-<p>
-  {{data?.title}}
-</p>
-<p>
-  <img [attr.src]="data?.image" style="height: 10%; width: 10%;">
-</p>
-<p>
-  {{data?.description}}
-</p>
-<p>
-  {{data?.price}}
-</p>
-<p>
-  {{data?.rating.rate}}
-  /
-  {{data?.rating.count}}
-</p>
+
+<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="center center">
+  <div style=" width: 40%;">
+    <p>
+      {{data?.category}}
+    </p>
+    <div fxLayout="row" fxLayoutAlign="start center">
+
+      <!-- TITLE AND RATING -->
+      <div>
+        {{data?.title}}
+      </div>
+      <span fxFlex="50">
+        <!-- SPACING -->
+      </span>
+      <div>
+        <app-e-store-shop-rating
+        [averageRating]="data.rating.rate"
+        ></app-e-store-shop-rating>
+        <div>
+          {{data.rating?.count}}
+        </div>
+      </div>
+    </div>
+    <!-- IMAGE AND BUY-->
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div>
+        <img [attr.src]="data?.image" style="height: 25%; width: 25%;">
+      </div>
+      <div>
+        {{data?.price}}$
+          AMOUNT
+        <button>BUY</button>
+      </div>
+
+    </div>
+    <p>
+      {{data?.description}}
+    </p>
+    <p>
+    </p>
+
+  </div>
+</div>

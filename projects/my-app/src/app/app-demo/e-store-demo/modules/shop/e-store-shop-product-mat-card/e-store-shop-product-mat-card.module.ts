@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 // API
 import { EStoreShopProductMatCardRoutingModule } from './e-store-shop-product-mat-card-routing.module';
 import { EStoreShopProductMatCardComponent } from './e-store-shop-product-mat-card.component';
+
+// MODULES
 import { EStoreShopRatingModule } from '../e-store-shop-rating/e-store-shop-rating.module';
 
 //MATERIAL
