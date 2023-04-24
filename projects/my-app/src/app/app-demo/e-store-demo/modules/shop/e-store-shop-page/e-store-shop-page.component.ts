@@ -16,7 +16,6 @@ import { EStoreProduct } from '../../../models/e-store-product.model';
 })
 export class EStoreShopPageComponent implements OnInit {
   // VAR
-  public data: EStoreProduct[] = [];
   categories: string[] = [];
 
   selectedCategory: string | undefined;
@@ -27,50 +26,19 @@ export class EStoreShopPageComponent implements OnInit {
   // SUBSCRIPTION
   private subscription: Subscription = new Subscription();
 
-  // MOVE
-  // ngOnChanges(changes: SimpleChanges): void {
-  //   if (!!changes['category'].currentValue) {
-  //     this.categoryMap.set(this.categoryId, new ManagerData(this.category));
-
-  //     const query = this.activatedRoute?.snapshot?.queryParams['query'];
-  //     this.queryParamsFormGroup.patchValue(!!query ? JSON.parse(query) : {});
-  //   }
-  // }
-
   ngOnInit(): void {
-    this.subscription.add(
-      this.productService
-        .getProducts()
-        .subscribe((productDomList: EStoreProduct[]) => {
-          this.data = productDomList;
-        })
-    );
     this.subscription.add(
       this.productService
         .getProductCategories()
         .subscribe((domCategories: string[]) => {
           this.categories = domCategories;
+          this.categories.push('all');
         })
     );
   }
 
-  // TEMP SORTING
+  // SORTING SELECT
   public selectCategory(value: HTMLSelectElement) {
     this.selectedCategory = value as unknown as string;
-  }
-
-  public checkCategory(itemCategory: string | undefined) {
-    if (!!this.selectedCategory) {
-      if (this.selectedCategory === itemCategory) {
-        console.log('2');
-        return true;
-      } else {
-        console.log('3');
-        return false;
-      }
-    } else {
-      console.log(this.selectedCategory);
-      return true;
-    }
   }
 }

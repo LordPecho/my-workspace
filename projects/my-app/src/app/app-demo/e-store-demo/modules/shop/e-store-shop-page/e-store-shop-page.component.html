@@ -15,16 +15,7 @@
     }}</mat-option>
   </mat-select>
 </mat-form-field>
-<!-- TO DO:
-PRODUCT VIEW -->
-PRODUCTS:
-<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-  <ng-container *ngFor="let item of data">
-    <app-e-store-shop-product-mat-card
-      *ngIf="checkCategory(item.category)"
-      [data]="item"
-      fxFlex="0 1 calc(25% - 32px)"
-    >
-    </app-e-store-shop-product-mat-card>
-  </ng-container>
-</div>
+
+<app-e-store-shop-product-cdk
+  [itemCategory]="selectedCategory"
+></app-e-store-shop-product-cdk>

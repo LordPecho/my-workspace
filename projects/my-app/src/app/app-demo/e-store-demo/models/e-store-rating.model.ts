@@ -1,4 +1,4 @@
 export interface IEStoreRating {
-  rate: string;
+  rate: number;
   count: number;
 }

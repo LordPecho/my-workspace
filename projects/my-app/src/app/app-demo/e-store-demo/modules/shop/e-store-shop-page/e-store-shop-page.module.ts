@@ -14,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 // MODULE
 import { FilterInputFormControlModule } from 'my-library';
 import { EStoreShopProductMatCardModule } from '../e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
+import { EStoreShopProductCdkModule } from '../e-store-shop-product-cdk/e-store-shop-product-cdk.module';
 
 // MATERIAL
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -22,21 +23,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [
-    EStoreShopPageComponent
-  ],
+  declarations: [EStoreShopPageComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     TranslateModule,
     FlexLayoutModule,
     EStoreShopProductMatCardModule,
+    EStoreShopProductCdkModule,
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
     MatInputModule,
-    EStoreShopPageRoutingModule
-  ]
+    EStoreShopPageRoutingModule,
+  ],
 })
-export class EStoreShopPageModule { }
+export class EStoreShopPageModule {}

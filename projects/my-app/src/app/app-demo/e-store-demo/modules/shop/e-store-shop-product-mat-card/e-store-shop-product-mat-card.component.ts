@@ -1,12 +1,5 @@
 // ANGULAR
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  Input,
-  Output,
-  ViewChild,
-} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 //API
 import { EStoreProduct } from '../../../models/e-store-product.model';
@@ -17,7 +10,6 @@ import { EStoreProduct } from '../../../models/e-store-product.model';
   styleUrls: ['./e-store-shop-product-mat-card.component.scss'],
 })
 export class EStoreShopProductMatCardComponent {
-  // NOTE
   // MAT CARD FOR PRODUCTS
   // VAR
   @Input() data: EStoreProduct;

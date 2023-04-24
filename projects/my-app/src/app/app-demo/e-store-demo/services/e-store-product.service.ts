@@ -12,51 +12,54 @@ import { environment } from 'projects/my-app/src/enviroments/environment';
 import { EStoreProduct, IEStoreProduct } from '../models/e-store-product.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EStoreProductService {
-
-  constructor(
-    private httpClient: HttpClient,
-  ) { }
+  constructor(private httpClient: HttpClient) {}
 
   //GET ALL
   public getProducts(catogories?: string[]): Observable<IEStoreProduct[]> {
-
-    //GET PRODUCT BY CATEGORY
-      // if(!!catogories){
-      //   catogories.forEach(()=>{
-
-      //   })
-      // }
-      // else{
-      // }
-
-        return this.httpClient
-        .get<IEStoreProduct[]>(environment.eStoreDemo.apiUrl + '/products')
-        .pipe(
-          map((data: IEStoreProduct[]) => {
-            const sanitizedData: IEStoreProduct[] = [];
-            data.forEach((item: IEStoreProduct) => {
-              sanitizedData.push(new EStoreProduct(item));
-            });
-            return sanitizedData;
-          })
-          );
-    }
-
-    // GET PRODUCT BY ID
-    public getProduct(productId: string): Observable<IEStoreProduct> {
-      return this.httpClient.get<IEStoreProduct>(
-        environment.eStoreDemo.apiUrl + '/products' + '/' + productId
+    return this.httpClient
+      .get<IEStoreProduct[]>(environment.eStoreDemo.apiUrl + '/products')
+      .pipe(
+        map((data: IEStoreProduct[]) => {
+          const sanitizedData: IEStoreProduct[] = [];
+          data.forEach((item: IEStoreProduct) => {
+            sanitizedData.push(new EStoreProduct(item));
+          });
+          return sanitizedData;
+        })
       );
-    }
+  }
 
-    // GET CATEGORIES
-    public getProductCategories(): Observable<string[]> {
-      return this.httpClient.get<string[]>(
-        environment.eStoreDemo.apiUrl + '/products/categories'
+  // GET PRODUCT BY ID
+  public getProduct(productId: string): Observable<IEStoreProduct> {
+    return this.httpClient.get<IEStoreProduct>(
+      environment.eStoreDemo.apiUrl + '/products' + '/' + productId
+    );
+  }
+
+  // GET CATEGORIES
+  public getProductCategories(): Observable<string[]> {
+    return this.httpClient.get<string[]>(
+      environment.eStoreDemo.apiUrl + '/products/categories'
+    );
+  }
+
+  // GET BY CATEGORY
+  public getProductsByCategory(category: string): Observable<IEStoreProduct[]> {
+    return this.httpClient
+      .get<IEStoreProduct[]>(
+        environment.eStoreDemo.apiUrl + '/products/category/' + category
+      )
+      .pipe(
+        map((data: IEStoreProduct[]) => {
+          const sanitizedData: IEStoreProduct[] = [];
+          data.forEach((item: IEStoreProduct) => {
+            sanitizedData.push(new EStoreProduct(item));
+          });
+          return sanitizedData;
+        })
       );
-    }
-
+  }
 }

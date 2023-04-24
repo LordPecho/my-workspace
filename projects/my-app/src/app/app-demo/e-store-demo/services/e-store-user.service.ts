@@ -21,7 +21,7 @@ export class EStoreUserService {
   ) { }
 
     //GET ALL
-    public getProducts(): Observable<IEStoreUser[]> {
+    public getUserts(): Observable<IEStoreUser[]> {
       return this.httpClient
         .get<IEStoreUser[]>(environment.eStoreDemo.apiUrl + 'users')
         .pipe(
@@ -36,7 +36,7 @@ export class EStoreUserService {
     }
 
     // GET USER BY ID
-    public getProduct(userId: string): Observable<IEStoreUser> {
+    public getUsert(userId: string): Observable<IEStoreUser> {
       return this.httpClient.get<IEStoreUser>(
         environment.eStoreDemo.apiUrl + 'users' + '/' + userId
       );
