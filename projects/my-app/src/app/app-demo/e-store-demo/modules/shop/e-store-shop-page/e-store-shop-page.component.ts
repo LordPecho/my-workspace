@@ -1,6 +1,7 @@
 // ANGULAR
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 //RxJS
 import { Subscription } from 'rxjs';

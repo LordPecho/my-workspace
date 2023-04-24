@@ -83,6 +83,13 @@ const routes: Routes = [
             ),
           },
           {
+            path:'shop/:productId',
+            loadChildren: () =>
+            import('./app-demo/e-store-demo/modules/shop/e-store-product-details-page/e-store-product-details-page.module').then(
+              (m) => m.EStoreProductDetailsPageModule
+            ),
+          },
+          {
             path:'cart',
             loadChildren: () =>
             import('./app-demo/e-store-demo/modules/cart/e-store-cart-page/e-store-cart-page.module').then(

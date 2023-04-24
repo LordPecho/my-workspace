@@ -18,7 +18,7 @@ export class EStoreProductService {
   constructor(private httpClient: HttpClient) {}
 
   //GET ALL
-  public getProducts(catogories?: string[]): Observable<IEStoreProduct[]> {
+  public getProducts(): Observable<IEStoreProduct[]> {
     return this.httpClient
       .get<IEStoreProduct[]>(environment.eStoreDemo.apiUrl + '/products')
       .pipe(

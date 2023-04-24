@@ -29,6 +29,7 @@ export class EStoreShopProductCdkComponent implements OnChanges, OnInit {
 
   constructor(private productService: EStoreProductService) {}
 
+  // LOAD ON INIT
   ngOnInit(): void {
     console.log('log the cat' + this.itemCategory);
     if (this.itemCategory == undefined) {
@@ -42,6 +43,7 @@ export class EStoreShopProductCdkComponent implements OnChanges, OnInit {
     }
   }
 
+  // LOAD AFTER SORT
   ngOnChanges(changes: SimpleChanges): void {
     if (!!changes['itemCategory'].currentValue) {
       if (this.itemCategory == undefined || this.itemCategory === 'all') {

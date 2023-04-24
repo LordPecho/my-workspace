@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 // API
-
 import { IJSONUser, JSONUser } from '../../../models/json-user.model';
 
 // SERVICES
@@ -18,12 +17,13 @@ import { JsonUserService } from '../../../services/json-user.service';
   templateUrl: './json-user-crud-page.component.html',
   styleUrls: ['./json-user-crud-page.component.scss'],
 })
-export class JsonUserCrudPageComponent {
+export class JsonUserCrudPageComponent implements OnInit {
   // VAR
   public userId: number;
   public data: JSONUser;
   public dataFormGroup: FormGroup = this.jsonUserService.formGroup();
 
+  // SUBSCRIPTION
   private subscription: Subscription = new Subscription();
 
   constructor(
