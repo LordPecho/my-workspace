@@ -10,9 +10,9 @@
         <!-- SPACING -->
       </span>
       <div>
-        <app-e-store-shop-rating
+        <lib-rating
           [averageRating]="data.rating.rate"
-        ></app-e-store-shop-rating>
+        ></lib-rating>
         <div class="color-primary">
           {{ data.rating?.count }} product reviews
         </div>
@@ -42,7 +42,7 @@
         <div>
           <mat-form-field
             class="basket-form-field">
-            <mat-label>#</mat-label>
+            <mat-label>amount</mat-label>
             <input matInput min="1" type="number" />
           </mat-form-field>
         </div>

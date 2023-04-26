@@ -7,7 +7,7 @@ import { EStoreShopProductMatCardRoutingModule } from './e-store-shop-product-ma
 import { EStoreShopProductMatCardComponent } from './e-store-shop-product-mat-card.component';
 
 // MODULES
-import { EStoreShopRatingModule } from '../e-store-shop-rating/e-store-shop-rating.module';
+import { RatingModule } from 'projects/my-library/src/public-api';
 
 //MATERIAL
 import { MatCardModule } from '@angular/material/card';
@@ -32,7 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    EStoreShopRatingModule,
+    RatingModule,
     EStoreShopProductMatCardRoutingModule
   ]
 })

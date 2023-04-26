@@ -2,22 +2,22 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-e-store-shop-rating',
-  templateUrl: './e-store-shop-rating.component.html',
-  styleUrls: ['./e-store-shop-rating.component.scss'],
+  selector: 'lib-rating',
+  templateUrl: './rating.component.html',
+  styleUrls: ['./rating.component.scss'],
 })
-export class EStoreShopRatingComponent {
+export class RatingComponent {
   // VAR
   @Input() averageRating: number = 0;
 
   // GET STAR
   get stars(): string[] {
+    // ROUNDED RATING
     const roundedRating = Math.round(this.averageRating * 2) / 2;
-    console.log(roundedRating);
+    // INTEGER PART
     const integerPart = Math.floor(roundedRating);
-    console.log(integerPart);
+    // FRACTIONAL PART
     const fractionalPart = roundedRating - integerPart;
-    console.log(fractionalPart);
     const stars = Array(integerPart).fill('star');
     if (fractionalPart > 0) {
       stars.push('star_half');

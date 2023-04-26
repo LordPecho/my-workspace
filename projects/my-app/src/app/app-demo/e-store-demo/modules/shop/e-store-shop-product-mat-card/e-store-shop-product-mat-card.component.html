@@ -15,9 +15,9 @@
     style="text-align: center"
   >
     <div>{{ data.rating.rate }} / {{ data.rating.count }}</div>
-    <app-e-store-shop-rating
+    <lib-rating
       [averageRating]="data.rating.rate"
-    ></app-e-store-shop-rating>
+    ></lib-rating>
     <p>{{ data.price }}$</p>
   </mat-card-content>
   <mat-card-actions

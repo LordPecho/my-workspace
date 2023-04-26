@@ -7,7 +7,7 @@ import { EStoreProductDetailsPageRoutingModule } from './e-store-product-details
 import { EStoreProductDetailsPageComponent } from './e-store-product-details-page.component';
 
 // MODULES
-import { EStoreShopRatingModule } from '../e-store-shop-rating/e-store-shop-rating.module';
+import { RatingModule } from 'my-library';
 
 //MATERIAL
 import { MatCardModule } from '@angular/material/card';
@@ -29,7 +29,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     MatIconModule,
     MatInputModule,
-    EStoreShopRatingModule,
+    RatingModule,
     EStoreProductDetailsPageRoutingModule,
   ],
 })
