@@ -13,15 +13,14 @@ import { EStoreShopRatingModule } from '../e-store-shop-rating/e-store-shop-rati
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 // 3lib
 import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [
-    EStoreProductDetailsPageComponent
-  ],
+  declarations: [EStoreProductDetailsPageComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -29,8 +28,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    MatInputModule,
     EStoreShopRatingModule,
-    EStoreProductDetailsPageRoutingModule
-  ]
+    EStoreProductDetailsPageRoutingModule,
+  ],
 })
-export class EStoreProductDetailsPageModule { }
+export class EStoreProductDetailsPageModule {}
