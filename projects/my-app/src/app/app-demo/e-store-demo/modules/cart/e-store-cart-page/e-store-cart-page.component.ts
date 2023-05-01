@@ -1,23 +1,74 @@
-import { Component } from '@angular/core';
-import { EStoreProduct } from '../../../models/e-store-product.model';
+// ANGULAR
+import { Component, Input, OnInit } from '@angular/core';
 
+// RxJS
+import { Subscription } from 'rxjs';
+
+// API
+import {
+  EStoreProduct,
+  IEStoreProduct,
+} from '../../../models/e-store-product.model';
+import { EStoreProductService } from '../../../services/e-store-product.service';
+
+class productData extends EStoreProduct {
+  amount: number = 0;
+}
 @Component({
   selector: 'app-e-store-cart-page',
   templateUrl: './e-store-cart-page.component.html',
-  styleUrls: ['./e-store-cart-page.component.scss']
+  styleUrls: ['./e-store-cart-page.component.scss'],
 })
-export class EStoreCartPageComponent {
-  items: any = [
+export class EStoreCartPageComponent implements OnInit {
+  // VAR
+  items_: productData[] = [];
+
+  @Input() items: any = [
     { name: 'Product A', price: 10 },
     { name: 'Product B', price: 20 },
-    { name: 'Product C', price: 30 }
+    { name: 'Product C', price: 30 },
   ];
 
+  public products: string[][] = [];
+
+  // SUBSCRIPTION
+  private subscription: Subscription = new Subscription();
+
+  constructor(private productService: EStoreProductService) {}
+  ngOnInit(): void {
+    this.products = JSON.parse(localStorage.getItem('products'));
+
+    this.products.forEach((item) => {
+      this.subscription.add(
+        this.productService
+          .getProduct(item[0])
+          .subscribe((productDom: IEStoreProduct) => {
+            this.items_.push(new productData(productDom));
+            this.items_[this.products.indexOf(item)].amount =
+              item[1] as unknown as number;
+          })
+      );
+    });
+    console.log(this.items_);
+  }
   getTotal(): number {
-    return this.items.reduce((acc, item) => acc + item.price, 0);
+    let value: number = 0;
+    this.items_.forEach((item) => {
+      value += item.amount * item.price;
+    });
+
+    return value;
   }
 
-  removeItem(item: any): void {
-    this.items = this.items.filter(i => i !== item);
+  removeItem(item: productData): void {
+    this.items_.splice(this.items.indexOf(item));
+    console.log(this.items_);
+
+    this.products.forEach((product)=>{
+      if(product[0] === item.id.toString()){
+        this.products.splice(this.products.indexOf(product));
+      }
+    });
+    localStorage.setItem('products', JSON.stringify(this.products));
   }
 }

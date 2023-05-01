@@ -1,21 +1,19 @@
 // ANGULAR
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
 
 //RxJS
 import { Subscription } from 'rxjs';
 
 // API
 import { EStoreProductService } from '../../../services/e-store-product.service';
-import { EStoreProduct } from '../../../models/e-store-product.model';
 
 @Component({
   selector: 'app-e-store-shop-page',
   templateUrl: './e-store-shop-page.component.html',
   styleUrls: ['./e-store-shop-page.component.scss'],
 })
-export class EStoreShopPageComponent implements OnInit {
+export class EStoreShopPageComponent implements OnInit, OnDestroy {
   // VAR
   categories: string[] = [];
 
@@ -41,5 +39,10 @@ export class EStoreShopPageComponent implements OnInit {
   // SORTING SELECT
   public selectCategory(value: HTMLSelectElement) {
     this.selectedCategory = value as unknown as string;
+  }
+
+  // UNSUBSCRIBE
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

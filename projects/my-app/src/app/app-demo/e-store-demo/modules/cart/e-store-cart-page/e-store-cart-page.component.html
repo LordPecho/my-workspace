@@ -3,14 +3,14 @@
   <div *ngIf="items.length === 0">
     <p>Your cart is empty.</p>
   </div>
-  <div *ngFor="let item of items" class="cart-item">
+  <div *ngFor="let item of items_" class="cart-item">
     <div class="item-info">
-      <div class="item-name">{{ item.name }}</div>
+      <div class="item-name">{{ item.title }}</div>
+      <div class="item-amount">{{ item.amount }}</div>
       <div class="item-price">{{ item.price | currency }}</div>
     </div>
     <button mat-raised-button color="warn" (click)="removeItem(item)">
-      <i class="fas fa-trash-alt"></i>
-      <span class="remove-text">Remove</span>
+      Remove
     </button>
   </div>
   <div class="total">

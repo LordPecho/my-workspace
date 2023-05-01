@@ -3,6 +3,7 @@ import {
   Component,
   Input,
   OnChanges,
+  OnDestroy,
   OnInit,
   SimpleChanges,
 } from '@angular/core';
@@ -19,7 +20,7 @@ import { EStoreProduct } from '../../../models/e-store-product.model';
   templateUrl: './e-store-shop-product-cdk.component.html',
   styleUrls: ['./e-store-shop-product-cdk.component.scss'],
 })
-export class EStoreShopProductCdkComponent implements OnChanges, OnInit {
+export class EStoreShopProductCdkComponent implements OnChanges, OnInit, OnDestroy {
   // VAR
   @Input() itemCategory: any = undefined;
   public data: EStoreProduct[] = [];
@@ -35,34 +36,38 @@ export class EStoreShopProductCdkComponent implements OnChanges, OnInit {
     if (this.itemCategory == undefined) {
       this.subscription.add(
         this.productService
+        .getProducts()
+        .subscribe((productDomList: EStoreProduct[]) => {
+          this.data = productDomList;
+        })
+        );
+      }
+    }
+
+    // LOAD AFTER SORT
+    ngOnChanges(changes: SimpleChanges): void {
+      if (!!changes['itemCategory'].currentValue) {
+        if (this.itemCategory == undefined || this.itemCategory === 'all') {
+          this.subscription.add(
+          this.productService
           .getProducts()
           .subscribe((productDomList: EStoreProduct[]) => {
-            this.data = productDomList;
-          })
-      );
-    }
-  }
-
-  // LOAD AFTER SORT
-  ngOnChanges(changes: SimpleChanges): void {
-    if (!!changes['itemCategory'].currentValue) {
-      if (this.itemCategory == undefined || this.itemCategory === 'all') {
-        this.subscription.add(
-          this.productService
-            .getProducts()
-            .subscribe((productDomList: EStoreProduct[]) => {
               this.data = productDomList;
             })
         );
       } else {
         this.subscription.add(
           this.productService
-            .getProductsByCategory(this.itemCategory)
+          .getProductsByCategory(this.itemCategory)
             .subscribe((productDomList: EStoreProduct[]) => {
               this.data = productDomList;
             })
-        );
+            );
+          }
+        }
       }
-    }
-  }
+      // UNSUBSCRIBE
+      ngOnDestroy(): void {
+        this.subscription.unsubscribe();
+      }
 }

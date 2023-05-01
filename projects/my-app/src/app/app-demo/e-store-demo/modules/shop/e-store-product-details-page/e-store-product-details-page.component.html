@@ -1,6 +1,5 @@
 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="center center">
   <div class="container">
-
     <div fxLayout="row" fxLayoutAlign="start center">
       <!-- TITLE AND RATING -->
       <div class="color-primary">
@@ -10,9 +9,7 @@
         <!-- SPACING -->
       </span>
       <div>
-        <lib-rating
-          [averageRating]="data.rating.rate"
-        ></lib-rating>
+        <lib-rating [averageRating]="data.rating.rate"></lib-rating>
         <div class="color-primary">
           {{ data.rating?.count }} product reviews
         </div>
@@ -22,32 +19,34 @@
       <div class="item-category" fxFlex="17">
         {{ data?.category }}
       </div>
-      <div
-      class="dash-seperator"
-       fxFlex="80">
+      <div class="dash-seperator" fxFlex="80">
         <!-- DASH SEPERATOR-->
       </div>
     </div>
     <!-- IMAGE AND BUY-->
     <div
-    style="margin: 50px;"
-    fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+      style="margin: 50px"
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      fxLayoutGap="8px"
+    >
       <div fxFlex="40">
-        <img [attr.src]="data?.image" class="item-image"/>
+        <img [attr.src]="data?.image" class="item-image" />
       </div>
       <mat-card
-      class="mat-elevation-z2 buy-card"
-      fxLayout="row" fxLayoutAlign="space-around center">
+        class="mat-elevation-z2 buy-card"
+        fxLayout="row"
+        fxLayoutAlign="space-around center"
+      >
         <h1 class="color-primary">{{ data?.price }}$</h1>
         <div>
-          <mat-form-field
-            class="basket-form-field">
+          <mat-form-field class="basket-form-field">
             <mat-label>amount</mat-label>
-            <input matInput min="1" type="number" />
+            <input matInput min="1" type="number" #amountInput (input)="amount = amountInput.value" [(ngModel)]="amount"/>
           </mat-form-field>
         </div>
         <div>
-          <button mat-raised-button color="primary">
+          <button (click)="addToBasket(data)" mat-raised-button color="primary">
             <mat-icon>shopping_basket</mat-icon> TO BASKET
           </button>
         </div>
@@ -58,4 +57,3 @@
     </div>
   </div>
 </div>
-
