@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Select an icon</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let icon of icons" [value]="icon">
+      <mat-icon>{{ icon }}</mat-icon> {{icon}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
