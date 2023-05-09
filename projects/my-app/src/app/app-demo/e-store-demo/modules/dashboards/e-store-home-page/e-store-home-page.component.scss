@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.items {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 1600px;
+  height: 200px;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  width: 400px;
+  height: 200px;
+  background-color: #ddd;
+  margin-right: 10px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.item.active {
+  background-color: #555;
+  color: #fff;
+}
+
+.btn-right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #555;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

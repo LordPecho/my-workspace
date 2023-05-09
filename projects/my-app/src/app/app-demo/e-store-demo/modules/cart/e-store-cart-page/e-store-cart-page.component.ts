@@ -23,12 +23,6 @@ export class EStoreCartPageComponent implements OnInit {
   // VAR
   items_: productData[] = [];
 
-  @Input() items: any = [
-    { name: 'Product A', price: 10 },
-    { name: 'Product B', price: 20 },
-    { name: 'Product C', price: 30 },
-  ];
-
   public products: string[][] = [];
 
   // SUBSCRIPTION
@@ -61,7 +55,7 @@ export class EStoreCartPageComponent implements OnInit {
   }
 
   removeItem(item: productData): void {
-    this.items_.splice(this.items.indexOf(item));
+    this.items_.splice(this.items_.indexOf(item));
     console.log(this.items_);
 
     this.products.forEach((product)=>{
