@@ -58,8 +58,8 @@ export class EStoreCartPageComponent implements OnInit {
     this.items_.splice(this.items_.indexOf(item));
     console.log(this.items_);
 
-    this.products.forEach((product)=>{
-      if(product[0] === item.id.toString()){
+    this.products.forEach((product) => {
+      if (product[0] === item.id.toString()) {
         this.products.splice(this.products.indexOf(product));
       }
     });

@@ -1,50 +1,27 @@
-.container {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  overflow: hidden;
+.carousel {
+  margin-bottom: 4rem;
 }
 
-.items {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 1600px;
-  height: 200px;
-  transition: transform 0.5s ease;
-}
-
-.item {
-  width: 400px;
-  height: 200px;
-  background-color: #ddd;
-  margin-right: 10px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-}
-
-.item.active {
-  background-color: #555;
-  color: #fff;
-}
-
-.btn-right {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #555;
-  color: #fff;
+.card {
+  margin: 0 auto;
+  width: 18rem;
   border: none;
-  outline: none;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }

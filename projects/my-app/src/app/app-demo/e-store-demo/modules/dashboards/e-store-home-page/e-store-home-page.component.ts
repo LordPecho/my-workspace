@@ -17,8 +17,6 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
   // VAR
   public data: EStoreProduct[] = [];
 
-  currentIndex = 0;
-
   // SUBSCRITPION
   private subscription: Subscription = new Subscription();
 
@@ -33,11 +31,10 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
         })
     );
   }
-  public checkRating(product: EStoreProduct){
-    if(product.rating.rate >= 4){
+  public checkRating(product: EStoreProduct) {
+    if (product.rating.rate >= 4) {
       return true;
-    }
-    else{
+    } else {
       return false;
     }
   }
