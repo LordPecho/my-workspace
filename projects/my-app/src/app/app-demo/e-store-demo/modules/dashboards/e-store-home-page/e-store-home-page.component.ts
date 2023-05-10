@@ -42,8 +42,8 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
   }
 
   // CHECK INDEX
-  public checkIndex(product: EStoreProduct, index: number) {
-    if (index === this.data.indexOf(product)) {
+  public checkIndex(product: EStoreProduct) {
+    if (this.index === this.data.indexOf(product)) {
       return true;
     } else {
       return false;

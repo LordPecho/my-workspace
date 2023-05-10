@@ -3,7 +3,7 @@
   <button mat-fab color="primary" (click)="leftButton()"><</button>
   <ng-container *ngFor="let item of data">
     <app-e-store-shop-product-mat-card
-      *ngIf="checkIndex(item, index)"
+      *ngIf="checkIndex(item)"
       [data]="item"
       fxFlex="0 1 calc(25% - 32px)"
     >
