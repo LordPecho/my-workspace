@@ -25,46 +25,50 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
   constructor(private productService: EStoreProductService) {}
 
   ngOnInit(): void {
+    // GET PRODUCT ONLY WITH RATING OF 4 AND OVER
     this.subscription.add(
       this.productService
         .getProducts()
         .subscribe((productDomList: EStoreProduct[]) => {
           productDomList.forEach((item: EStoreProduct) => {
-            if(item.rating.rate >= 4){
+            if (item.rating.rate >= 4) {
               this.data.push(item);
               this.count = this.count + 1;
-              console.log(this.count)
+              console.log(this.count);
             }
-          })
+          });
         })
     );
   }
-  public checkRating(product: EStoreProduct, index: number) {
-    if ( index === this.data.indexOf(product)) {
+
+  // CHECK INDEX
+  public checkIndex(product: EStoreProduct, index: number) {
+    if (index === this.data.indexOf(product)) {
       return true;
     } else {
       return false;
     }
   }
-  public rightButton(){
-    console.log('hi')
-    if(this.index < this.count-1){
+
+  // MOVE RIGHT
+  public rightButton() {
+    console.log('hi');
+    if (this.index < this.count - 1) {
       this.index = this.index + 1;
-      console.log(this.index)
-    }
-    else{
+      console.log(this.index);
+    } else {
       this.index = 0;
     }
   }
-  public leftButton(){
-    if(this.index > 0){
+
+  // MOVE LEFT
+  public leftButton() {
+    if (this.index > 0) {
       this.index--;
-    }
-    else{
-      this.index = this.count-1;
+    } else {
+      this.index = this.count - 1;
     }
   }
-
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

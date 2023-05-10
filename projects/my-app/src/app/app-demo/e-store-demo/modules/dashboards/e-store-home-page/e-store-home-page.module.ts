@@ -17,16 +17,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [
-    EStoreHomePageComponent
-  ],
+  declarations: [EStoreHomePageComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
     TranslateModule,
     MatButtonModule,
     EStoreShopProductMatCardModule,
-    EStoreHomePageRoutingModule
-  ]
+    EStoreHomePageRoutingModule,
+  ],
 })
-export class EStoreHomePageModule { }
+export class EStoreHomePageModule {}
