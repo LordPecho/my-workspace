@@ -38,7 +38,6 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
             if (item.rating.rate >= 4) {
               this.data.push(item);
               this.count = this.count + 1;
-              console.log(this.count);
             }
           });
         })

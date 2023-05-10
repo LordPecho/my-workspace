@@ -6,7 +6,7 @@
     alt="Product Image"
   />
   <mat-card-title class="product-title-container" style="text-align: center">
-    <p>
+    <p class="title">
       {{ data.title }}
     </p>
   </mat-card-title>
@@ -16,7 +16,7 @@
   >
     <div>{{ data.rating.rate }} / {{ data.rating.count }}</div>
     <lib-rating [averageRating]="data.rating.rate"></lib-rating>
-    <p>{{ data.price }}$</p>
+    <p class="price">{{ data.price }}$</p>
   </mat-card-content>
   <mat-card-actions
     class="product-actions-container"

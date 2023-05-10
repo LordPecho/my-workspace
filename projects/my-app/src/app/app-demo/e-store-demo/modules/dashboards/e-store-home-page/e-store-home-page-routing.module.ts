@@ -9,11 +9,11 @@ const routes: Routes = [
   {
     path: '',
     component: EStoreHomePageComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EStoreHomePageRoutingModule { }
+export class EStoreHomePageRoutingModule {}
