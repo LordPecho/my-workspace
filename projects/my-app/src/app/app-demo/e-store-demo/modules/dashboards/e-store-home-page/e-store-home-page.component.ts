@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 // API
 import { EStoreProduct } from '../../../models/e-store-product.model';
 import { EStoreProductService } from '../../../services/e-store-product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-e-store-home-page',
@@ -22,7 +23,10 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
   // SUBSCRITPION
   private subscription: Subscription = new Subscription();
 
-  constructor(private productService: EStoreProductService) {}
+  constructor(
+    private productService: EStoreProductService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     // GET PRODUCT ONLY WITH RATING OF 4 AND OVER
@@ -70,6 +74,10 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
     }
   }
 
+  // NAVIGATE
+  public navigate(item: EStoreProduct) {
+    this.router.navigate(item.routerLink);
+  }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

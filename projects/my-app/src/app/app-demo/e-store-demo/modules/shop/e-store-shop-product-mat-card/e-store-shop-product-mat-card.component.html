@@ -15,9 +15,7 @@
     style="text-align: center"
   >
     <div>{{ data.rating.rate }} / {{ data.rating.count }}</div>
-    <lib-rating
-      [averageRating]="data.rating.rate"
-    ></lib-rating>
+    <lib-rating [averageRating]="data.rating.rate"></lib-rating>
     <p>{{ data.price }}$</p>
   </mat-card-content>
   <mat-card-actions
@@ -28,7 +26,12 @@
     <span fxFlex="80">
       <!-- SPACE FILLER -->
     </span>
-    <button mat-flat-button fxFlex="20" (click)="navigate(data)">
+    <button
+      mat-flat-button
+      fxFlex="20"
+      (click)="navigate(data)"
+      *ngIf="detailsButtonEnabled"
+    >
       DETAILS
     </button>
   </mat-card-actions>

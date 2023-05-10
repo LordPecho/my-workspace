@@ -14,6 +14,7 @@ export class EStoreShopProductMatCardComponent {
   // MAT CARD FOR PRODUCTS
   // VAR
   @Input() data: EStoreProduct;
+  @Input() detailsButtonEnabled: boolean = true;
   constructor(private router: Router) {}
 
   // NAVIGATION
