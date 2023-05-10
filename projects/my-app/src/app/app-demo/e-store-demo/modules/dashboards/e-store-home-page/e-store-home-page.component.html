@@ -1,7 +1,8 @@
 <p>e-store-home-page works!</p>
 Popular Products:
 
-<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <button mat-fab color="primary" (click)="leftButton()"> < </button>
   <ng-container *ngFor="let item of data">
     <app-e-store-shop-product-mat-card
       *ngIf="checkIndex(item, index)"
@@ -10,9 +11,8 @@ Popular Products:
     >
     </app-e-store-shop-product-mat-card>
   </ng-container>
+  <button mat-fab color="primary" (click)="rightButton()"> > </button>
 </div>
 <div>
-<button mat-fab color="primary" (click)="leftButton()"> < </button>
-<button mat-fab color="primary" (click)="rightButton()"> > </button>
 
 </div>
