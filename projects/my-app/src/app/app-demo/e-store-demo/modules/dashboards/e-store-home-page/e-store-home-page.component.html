@@ -4,10 +4,15 @@ Popular Products:
 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
   <ng-container *ngFor="let item of data">
     <app-e-store-shop-product-mat-card
-      *ngIf="checkRating(item)"
+      *ngIf="checkRating(item, index)"
       [data]="item"
       fxFlex="0 1 calc(25% - 32px)"
     >
     </app-e-store-shop-product-mat-card>
   </ng-container>
+</div>
+<div>
+<button mat-fab color="primary" (click)="leftButton()"> < </button>
+<button mat-fab color="primary" (click)="rightButton()"> > </button>
+
 </div>

@@ -9,6 +9,9 @@ import { EStoreHomePageComponent } from './e-store-home-page.component';
 // MODULES
 import { EStoreShopProductMatCardModule } from '../../shop/e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
 
+// MATERIAL
+import { MatButtonModule } from '@angular/material/button';
+
 // 3Lib
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
@@ -21,6 +24,7 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     FlexLayoutModule,
     TranslateModule,
+    MatButtonModule,
     EStoreShopProductMatCardModule,
     EStoreHomePageRoutingModule
   ]

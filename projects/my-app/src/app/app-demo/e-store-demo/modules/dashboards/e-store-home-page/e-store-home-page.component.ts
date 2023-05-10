@@ -16,6 +16,8 @@ import { EStoreProductService } from '../../../services/e-store-product.service'
 export class EStoreHomePageComponent implements OnInit, OnDestroy {
   // VAR
   public data: EStoreProduct[] = [];
+  public index: number = 0;
+  public count: number = 0;
 
   // SUBSCRITPION
   private subscription: Subscription = new Subscription();
@@ -27,17 +29,42 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
       this.productService
         .getProducts()
         .subscribe((productDomList: EStoreProduct[]) => {
-          this.data = productDomList;
+          productDomList.forEach((item: EStoreProduct) => {
+            if(item.rating.rate >= 4){
+              this.data.push(item);
+              this.count = this.count + 1;
+              console.log(this.count)
+            }
+          })
         })
     );
   }
-  public checkRating(product: EStoreProduct) {
-    if (product.rating.rate >= 4) {
+  public checkRating(product: EStoreProduct, index: number) {
+    if ( index === this.data.indexOf(product)) {
       return true;
     } else {
       return false;
     }
   }
+  public rightButton(){
+    console.log('hi')
+    if(this.index < this.count-1){
+      this.index = this.index + 1;
+      console.log(this.index)
+    }
+    else{
+      this.index = 0;
+    }
+  }
+  public leftButton(){
+    if(this.index > 0){
+      this.index--;
+    }
+    else{
+      this.index = this.count-1;
+    }
+  }
+
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
