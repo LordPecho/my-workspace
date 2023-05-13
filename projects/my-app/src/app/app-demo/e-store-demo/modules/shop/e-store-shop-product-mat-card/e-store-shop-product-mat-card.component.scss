@@ -1,4 +1,6 @@
-
+img{
+  mix-blend-mode: multiply;
+}
 .product-card {
   width: 400px;
   height: 500px;
@@ -30,6 +32,8 @@
   color: #3F51B5;
 }
 .highlighted{
-  border: 2px dotted #3F51B5;
+  border: 2px dashed #3F51B5;
+  background-color: #3f51b530;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
 }
 // aspectwrapper
