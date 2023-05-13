@@ -5,9 +5,10 @@
   </div>
   <div *ngFor="let item of items_" class="cart-item">
     <div class="item-info">
-      <div class="item-name">{{ item.title }}</div>
-      <div class="item-amount">{{ item.amount }}</div>
-      <div class="item-price">{{ item.price | currency }}</div>
+      <div class="item-name">{{ item?.title }}</div>
+      <div class="item-amount">Amount: {{ item?.amount }}</div>
+      <div class="item-price">Per item: {{ item?.price | currency }}</div>
+      <div class="item-price">Total: {{ (item?.price*item?.amount) | currency }}</div>
     </div>
     <button mat-raised-button color="warn" (click)="removeItem(item)">
       Remove

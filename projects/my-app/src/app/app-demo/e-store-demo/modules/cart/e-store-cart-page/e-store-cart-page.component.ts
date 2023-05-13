@@ -12,7 +12,7 @@ import {
 import { EStoreProductService } from '../../../services/e-store-product.service';
 
 class productData extends EStoreProduct {
-  amount: number = 0;
+  amount: any = 0;
 }
 @Component({
   selector: 'app-e-store-cart-page',
@@ -39,7 +39,7 @@ export class EStoreCartPageComponent implements OnInit {
           .subscribe((productDom: IEStoreProduct) => {
             this.items_.push(new productData(productDom));
             this.items_[this.products.indexOf(item)].amount =
-              item[1] as unknown as number;
+              item[1];
           })
       );
     });
@@ -55,7 +55,7 @@ export class EStoreCartPageComponent implements OnInit {
   }
 
   removeItem(item: productData): void {
-    this.items_.splice(this.items_.indexOf(item));
+    this.items_.splice(this.items_.indexOf(item),1);
     console.log(this.items_);
 
     this.products.forEach((product) => {
