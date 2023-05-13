@@ -7,5 +7,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cart-button.component.scss']
 })
 export class CartButtonComponent {
- @Input() cartCount: number = 0;
+
+   // GET CART SIZE
+   public get cartSize() {
+    const products = JSON.parse(localStorage.getItem('products'));
+    const cartCount = products.length;
+    return cartCount;
+  }
+
 }
