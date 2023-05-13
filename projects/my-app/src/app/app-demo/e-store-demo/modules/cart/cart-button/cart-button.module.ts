@@ -9,21 +9,17 @@ import { CartButtonComponent } from './cart-button.component';
 // MATERIAL
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
-  declarations: [
-    CartButtonComponent
-  ],
-  exports: [
-    CartButtonComponent
-  ],
+  declarations: [CartButtonComponent],
+  exports: [CartButtonComponent],
   imports: [
     CommonModule,
     MatButtonModule,
     MatIconModule,
     MatBadgeModule,
-    CartButtonRoutingModule
-  ]
+    CartButtonRoutingModule,
+  ],
 })
-export class CartButtonModule { }
+export class CartButtonModule {}

@@ -7,13 +7,13 @@ import { EStoreCartPageComponent } from './e-store-cart-page.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: EStoreCartPageComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EStoreCartPageRoutingModule { }
+export class EStoreCartPageRoutingModule {}

@@ -42,7 +42,14 @@
         <div>
           <mat-form-field class="basket-form-field">
             <mat-label>amount</mat-label>
-            <input matInput min="1" type="number" #amountInput (input)="amount = amountInput.value" [(ngModel)]="amount"/>
+            <input
+              matInput
+              min="1"
+              type="number"
+              #amountInput
+              (input)="amount = amountInput.value"
+              [(ngModel)]="amount"
+            />
           </mat-form-field>
         </div>
         <div>

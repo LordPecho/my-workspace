@@ -20,12 +20,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [
-    EStoreLayoutComponent
-  ],
-  exports: [
-    EStoreLayoutComponent
-  ],
+  declarations: [EStoreLayoutComponent],
+  exports: [EStoreLayoutComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -37,7 +33,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     TranslateModule,
     FlexLayoutModule,
-    EStoreLayoutRoutingModule
-  ]
+    EStoreLayoutRoutingModule,
+  ],
 })
-export class EStoreLayoutModule { }
+export class EStoreLayoutModule {}

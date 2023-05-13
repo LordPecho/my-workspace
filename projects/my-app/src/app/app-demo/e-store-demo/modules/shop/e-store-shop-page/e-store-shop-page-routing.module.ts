@@ -8,12 +8,12 @@ import { EStoreShopPageComponent } from './e-store-shop-page.component';
 const routes: Routes = [
   {
     path: '',
-    component: EStoreShopPageComponent
-  }
+    component: EStoreShopPageComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EStoreShopPageRoutingModule { }
+export class EStoreShopPageRoutingModule {}

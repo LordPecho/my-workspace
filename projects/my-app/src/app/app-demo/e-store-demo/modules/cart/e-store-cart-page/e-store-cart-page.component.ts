@@ -38,8 +38,7 @@ export class EStoreCartPageComponent implements OnInit {
           .getProduct(item[0])
           .subscribe((productDom: IEStoreProduct) => {
             this.items_.push(new productData(productDom));
-            this.items_[this.products.indexOf(item)].amount =
-              item[1];
+            this.items_[this.products.indexOf(item)].amount = item[1];
           })
       );
     });
@@ -55,7 +54,7 @@ export class EStoreCartPageComponent implements OnInit {
   }
 
   removeItem(item: productData): void {
-    this.items_.splice(this.items_.indexOf(item),1);
+    this.items_.splice(this.items_.indexOf(item), 1);
     console.log(this.items_);
 
     this.products.forEach((product) => {

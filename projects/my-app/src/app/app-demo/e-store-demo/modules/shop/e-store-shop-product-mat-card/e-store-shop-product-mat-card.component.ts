@@ -23,10 +23,9 @@ export class EStoreShopProductMatCardComponent {
   public navigate(item: EStoreProduct) {
     this.router.navigate(item.routerLink);
   }
-  public isInCart(value: boolean){
-    return{
-      'highlighted': this.itemIsIncart,
-    }
-
+  public isInCart(value: boolean) {
+    return {
+      highlighted: this.itemIsIncart,
+    };
   }
 }

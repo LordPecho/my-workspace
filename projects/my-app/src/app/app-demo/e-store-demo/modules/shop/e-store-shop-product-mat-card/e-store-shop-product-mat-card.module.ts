@@ -19,12 +19,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [
-    EStoreShopProductMatCardComponent
-  ],
-  exports:[
-    EStoreShopProductMatCardComponent,
-  ],
+  declarations: [EStoreShopProductMatCardComponent],
+  exports: [EStoreShopProductMatCardComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -33,7 +29,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     MatIconModule,
     RatingModule,
-    EStoreShopProductMatCardRoutingModule
-  ]
+    EStoreShopProductMatCardRoutingModule,
+  ],
 })
-export class EStoreShopProductMatCardModule { }
+export class EStoreShopProductMatCardModule {}
