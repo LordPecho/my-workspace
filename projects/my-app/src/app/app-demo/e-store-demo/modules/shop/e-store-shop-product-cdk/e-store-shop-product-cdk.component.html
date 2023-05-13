@@ -2,6 +2,7 @@
   <ng-container *ngFor="let item of data">
     <app-e-store-shop-product-mat-card
       [data]="item"
+      [itemIsIncart]="item.isInCart"
       fxFlex="0 1 calc(25% - 32px)"
     >
     </app-e-store-shop-product-mat-card>

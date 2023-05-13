@@ -15,10 +15,18 @@ export class EStoreShopProductMatCardComponent {
   // VAR
   @Input() data: EStoreProduct;
   @Input() detailsButtonEnabled: boolean = true;
+  @Input() itemIsIncart: boolean = false;
+
   constructor(private router: Router) {}
 
   // NAVIGATION
   public navigate(item: EStoreProduct) {
     this.router.navigate(item.routerLink);
+  }
+  public isInCart(value: boolean){
+    return{
+      'highlighted': this.itemIsIncart,
+    }
+
   }
 }
