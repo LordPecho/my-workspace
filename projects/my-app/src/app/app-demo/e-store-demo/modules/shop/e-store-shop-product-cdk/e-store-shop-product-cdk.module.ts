@@ -16,10 +16,9 @@ import { FilterInputFormControlModule } from 'my-library';
 import { EStoreShopProductMatCardModule } from '../e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
 
 // MATERIAL
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [EStoreShopProductCdkComponent],
@@ -29,12 +28,10 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     TranslateModule,
     FlexLayoutModule,
+    MatIconModule,
+    MatButtonModule,
+    MatBadgeModule,
     EStoreShopProductMatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatCardModule,
-    MatInputModule,
     EStoreShopProductCdkRoutingModule,
   ],
 })

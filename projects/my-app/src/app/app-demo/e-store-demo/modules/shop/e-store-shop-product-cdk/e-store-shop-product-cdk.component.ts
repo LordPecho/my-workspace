@@ -28,8 +28,10 @@ export class EStoreShopProductCdkComponent implements OnChanges, OnInit, OnDestr
   // VAR
   @Input() itemCategory: any = undefined;
   public data: productData[] = [];
+  public cartCount: number = 0;
 
   private products: string[][];
+
 
   // SUBSCRIPTION
   private subscription: Subscription = new Subscription();
@@ -39,6 +41,7 @@ export class EStoreShopProductCdkComponent implements OnChanges, OnInit, OnDestr
   // LOAD ON INIT
   ngOnInit(): void {
     this.products = JSON.parse(localStorage.getItem('products'));
+    this.cartCount = this.products.length;
     console.log('log the cat' + this.itemCategory);
     if (this.itemCategory == undefined) {
       this.subscription.add(
