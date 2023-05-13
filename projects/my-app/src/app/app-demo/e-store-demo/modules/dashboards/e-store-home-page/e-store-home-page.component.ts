@@ -20,6 +20,9 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
   public index: number = 0;
   public count: number = 0;
 
+  public cartCount: number = 0;
+  private products: string[][];
+
   // SUBSCRITPION
   private subscription: Subscription = new Subscription();
 
@@ -29,6 +32,11 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+
+    // GET CART SIZE
+    this.products = JSON.parse(localStorage.getItem('products'));
+    this.cartCount = this.products.length;
+
     // GET PRODUCT ONLY WITH RATING OF 4 AND OVER
     this.subscription.add(
       this.productService

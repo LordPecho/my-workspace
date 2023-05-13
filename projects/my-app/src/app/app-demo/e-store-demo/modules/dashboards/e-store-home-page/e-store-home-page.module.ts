@@ -8,6 +8,7 @@ import { EStoreHomePageComponent } from './e-store-home-page.component';
 
 // MODULES
 import { EStoreShopProductMatCardModule } from '../../shop/e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
+import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
 
 // MATERIAL
 import { MatButtonModule } from '@angular/material/button';
@@ -24,6 +25,7 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
     MatButtonModule,
     EStoreShopProductMatCardModule,
+    CartButtonModule,
     EStoreHomePageRoutingModule,
   ],
 })

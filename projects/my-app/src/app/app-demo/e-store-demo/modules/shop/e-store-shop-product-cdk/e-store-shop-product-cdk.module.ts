@@ -14,11 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 // MODULE
 import { FilterInputFormControlModule } from 'my-library';
 import { EStoreShopProductMatCardModule } from '../e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
-
-// MATERIAL
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import {MatBadgeModule} from '@angular/material/badge';
+import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
 
 @NgModule({
   declarations: [EStoreShopProductCdkComponent],
@@ -28,9 +24,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     ReactiveFormsModule,
     TranslateModule,
     FlexLayoutModule,
-    MatIconModule,
-    MatButtonModule,
-    MatBadgeModule,
+    CartButtonModule,
     EStoreShopProductMatCardModule,
     EStoreShopProductCdkRoutingModule,
   ],
