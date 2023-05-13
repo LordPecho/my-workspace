@@ -23,11 +23,6 @@ export class EStoreLayoutComponent {
       icon: 'store',
       routerLink: ['/' , 'e-store' , 'shop'],
     },
-    {
-      title: 'cart',
-      icon: 'shopping_cart',
-      routerLink: ['/' , 'e-store' , 'cart'],
-    },
   ];
 
   public navigate(item: any){
