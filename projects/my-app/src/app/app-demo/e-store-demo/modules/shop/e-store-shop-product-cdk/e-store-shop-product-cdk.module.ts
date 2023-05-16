@@ -12,9 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 
 // MODULE
-import { FilterInputFormControlModule } from 'my-library';
 import { EStoreShopProductMatCardModule } from '../e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
-import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
 
 @NgModule({
   declarations: [EStoreShopProductCdkComponent],
@@ -24,7 +22,6 @@ import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
     ReactiveFormsModule,
     TranslateModule,
     FlexLayoutModule,
-    CartButtonModule,
     EStoreShopProductMatCardModule,
     EStoreShopProductCdkRoutingModule,
   ],

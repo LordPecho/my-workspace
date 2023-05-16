@@ -77,6 +77,8 @@ export class EStoreProductDetailsPageComponent implements OnInit, OnDestroy {
         })
     );
   }
+
+  // UNSUBSCRIBE
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

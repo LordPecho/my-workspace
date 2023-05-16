@@ -1,5 +1,5 @@
 // ANGULAR
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 // RxJS
 import { Subscription } from 'rxjs';
@@ -12,14 +12,14 @@ import {
 import { EStoreProductService } from '../../../services/e-store-product.service';
 
 class productData extends EStoreProduct {
-  amount: any = 0;
+  amount: number = 0;
 }
 @Component({
   selector: 'app-e-store-cart-page',
   templateUrl: './e-store-cart-page.component.html',
   styleUrls: ['./e-store-cart-page.component.scss'],
 })
-export class EStoreCartPageComponent implements OnInit {
+export class EStoreCartPageComponent implements OnInit, OnDestroy {
   // VAR
   items_: productData[] = [];
 
@@ -31,16 +31,18 @@ export class EStoreCartPageComponent implements OnInit {
   constructor(private productService: EStoreProductService) {}
   ngOnInit(): void {
     this.products = JSON.parse(localStorage.getItem('products'));
-
+    console.log(this.products)
     this.products.forEach((item) => {
+      const itemIndex: number = this.products.indexOf(item);
       this.subscription.add(
         this.productService
           .getProduct(item[0])
-          .subscribe((productDom: IEStoreProduct) => {
+          .subscribe((productDom: productData) => {
             this.items_.push(new productData(productDom));
-            this.items_[this.products.indexOf(item)].amount = item[1];
+            this.items_[itemIndex].amount = (item[1] as any) as number;
+
           })
-      );
+          );
     });
     console.log(this.items_);
   }
@@ -63,5 +65,10 @@ export class EStoreCartPageComponent implements OnInit {
       }
     });
     localStorage.setItem('products', JSON.stringify(this.products));
+  }
+
+  // UNSUBSCRIBE
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

@@ -8,6 +8,7 @@ import { EStoreShopProductMatCardComponent } from './e-store-shop-product-mat-ca
 
 // MODULES
 import { RatingModule } from 'projects/my-library/src/public-api';
+import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
 
 //MATERIAL
 import { MatCardModule } from '@angular/material/card';
@@ -29,6 +30,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     MatIconModule,
     RatingModule,
+    CartButtonModule,
     EStoreShopProductMatCardRoutingModule,
   ],
 })

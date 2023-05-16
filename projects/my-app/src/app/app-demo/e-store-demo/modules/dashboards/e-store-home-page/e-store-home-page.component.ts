@@ -55,10 +55,8 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
 
   // MOVE RIGHT
   public rightButton() {
-    console.log('hi');
     if (this.index < this.count - 1) {
       this.index = this.index + 1;
-      console.log(this.index);
     } else {
       this.index = 0;
     }

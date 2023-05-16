@@ -9,6 +9,7 @@ import { EStoreProductDetailsPageComponent } from './e-store-product-details-pag
 
 // MODULES
 import { RatingModule } from 'my-library';
+import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
 
 //MATERIAL
 import { MatCardModule } from '@angular/material/card';
@@ -34,6 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     MatInputModule,
     RatingModule,
+    CartButtonModule,
     EStoreProductDetailsPageRoutingModule,
   ],
 })

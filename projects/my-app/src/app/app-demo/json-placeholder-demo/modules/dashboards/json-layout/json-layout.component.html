@@ -5,7 +5,7 @@
         mat-mini-fab
         color="primary"
         (click)="navigate(item.routerLink)"
-        matTooltipClass="layout-tooltip"
+        [matTooltipClass]="'layout-tooltip'"
         [matTooltip]="item.title"
       >
         <mat-icon>{{ item.icon }}</mat-icon>

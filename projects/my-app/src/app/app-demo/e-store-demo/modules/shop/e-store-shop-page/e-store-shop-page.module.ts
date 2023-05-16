@@ -12,8 +12,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 
 // MODULE
-import { EStoreShopProductMatCardModule } from '../e-store-shop-product-mat-card/e-store-shop-product-mat-card.module';
 import { EStoreShopProductCdkModule } from '../e-store-shop-product-cdk/e-store-shop-product-cdk.module';
+import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
 
 // MATERIAL
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,10 +26,10 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     TranslateModule,
     FlexLayoutModule,
-    EStoreShopProductMatCardModule,
     EStoreShopProductCdkModule,
     MatFormFieldModule,
     MatSelectModule,
+    CartButtonModule,
     EStoreShopPageRoutingModule,
   ],
 })
