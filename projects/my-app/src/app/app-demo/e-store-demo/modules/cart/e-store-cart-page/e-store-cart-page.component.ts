@@ -31,18 +31,21 @@ export class EStoreCartPageComponent implements OnInit, OnDestroy {
   constructor(private productService: EStoreProductService) {}
   ngOnInit(): void {
     this.products = JSON.parse(localStorage.getItem('products'));
-    console.log(this.products)
-    this.products.forEach((item) => {
-      const itemIndex: number = this.products.indexOf(item);
+    console.log(this.products);
+    this.products.forEach((product) => {
+      const itemIndex: number = this.products.indexOf(product);
       this.subscription.add(
         this.productService
-          .getProduct(item[0])
+          .getProduct(product[0])
           .subscribe((productDom: productData) => {
             this.items_.push(new productData(productDom));
-            this.items_[itemIndex].amount = (item[1] as any) as number;
-
+            this.items_.forEach((item) => {
+              if (item.id.toString() === product[0]) {
+                item.amount = product[1] as any as number;
+              }
+            });
           })
-          );
+      );
     });
     console.log(this.items_);
   }
