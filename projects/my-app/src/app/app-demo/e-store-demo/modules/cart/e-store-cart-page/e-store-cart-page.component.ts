@@ -61,7 +61,7 @@ export class EStoreCartPageComponent implements OnInit, OnDestroy {
 
     this.products.forEach((product) => {
       if (product[0] === item.id.toString()) {
-        this.products.splice(this.products.indexOf(product));
+        this.products.splice(this.products.indexOf(product), 1);
       }
     });
     localStorage.setItem('products', JSON.stringify(this.products));
