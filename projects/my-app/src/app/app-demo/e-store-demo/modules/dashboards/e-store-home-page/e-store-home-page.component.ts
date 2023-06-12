@@ -71,11 +71,6 @@ export class EStoreHomePageComponent implements OnInit, OnDestroy {
     }
   }
 
-  // NAVIGATE
-  public navigate(item: EStoreProduct) {
-    this.router.navigate(item.routerLink);
-  }
-
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

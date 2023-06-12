@@ -1,4 +1,8 @@
-<mat-card [ngClass]="isInCart(true)" class="product-card">
+<mat-card
+  [ngClass]="isInCart(true)"
+  class="product-card"
+  (click)="navigate(data)"
+>
   <img
     class="product-image"
     mat-card-image
@@ -26,13 +30,5 @@
     <span fxFlex="80">
       <!-- SPACE FILLER -->
     </span>
-    <button
-      mat-flat-button
-      fxFlex="20"
-      (click)="navigate(data)"
-      *ngIf="detailsButtonEnabled"
-    >
-      DETAILS
-    </button>
   </mat-card-actions>
 </mat-card>

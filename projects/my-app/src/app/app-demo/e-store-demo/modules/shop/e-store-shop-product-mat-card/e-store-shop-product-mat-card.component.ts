@@ -11,7 +11,6 @@ import { EStoreProduct } from '../../../models/e-store-product.model';
   styleUrls: ['./e-store-shop-product-mat-card.component.scss'],
 })
 export class EStoreShopProductMatCardComponent {
-  // MAT CARD FOR PRODUCTS
   // VAR
   @Input() data: EStoreProduct;
   @Input() detailsButtonEnabled: boolean = true;
