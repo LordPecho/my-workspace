@@ -1,6 +1,6 @@
 <!-- SORT BY CATEGORY -->
 <mat-card fxLayout="row" fxLayoutAlign="center center">
-  <mat-form-field style="width: 25%; margin: 10px" color="primary">
+  <mat-form-field class="select-container" color="primary">
     <mat-label>Categories:</mat-label>
     <mat-select [formControl]="cats" (valueChange)="selectCategory($event)">
       <mat-option *ngFor="let category of categories" [value]="category">{{
