@@ -1,17 +1,18 @@
-<!-- SORTING -->
-<span>Sort by category: </span>
-<mat-form-field appearance="fill">
-  <mat-label>Categories</mat-label>
-  <mat-select [formControl]="cats" (valueChange)="selectCategory($event)">
-    <mat-option *ngFor="let category of categories" [value]="category">{{
-      category
-    }}</mat-option>
-  </mat-select>
-</mat-form-field>
+<!-- SORT BY CATEGORY -->
+<mat-card fxLayout="row" fxLayoutAlign="center center">
+  <mat-form-field style="width: 25%; margin: 10px" color="primary">
+    <mat-label>Categories:</mat-label>
+    <mat-select [formControl]="cats" (valueChange)="selectCategory($event)">
+      <mat-option *ngFor="let category of categories" [value]="category">{{
+        category
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-card>
 
 <app-e-store-shop-product-cdk
   [itemCategory]="selectedCategory"
 ></app-e-store-shop-product-cdk>
 
-  <!-- NAVIGATE TO CART SHOP -->
-  <app-cart-button></app-cart-button>
+<!-- NAVIGATE TO CART -->
+<app-cart-button></app-cart-button>

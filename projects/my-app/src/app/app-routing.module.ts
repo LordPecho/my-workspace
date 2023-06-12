@@ -76,34 +76,42 @@ const routes: Routes = [
         path: 'e-store',
         children: [
           {
-            path:'shop',
+            path: 'shop',
             loadChildren: () =>
-            import('./app-demo/e-store-demo/modules/shop/e-store-shop-page/e-store-shop-page.module').then(
-              (m) => m.EStoreShopPageModule
-            ),
+              import(
+                './app-demo/e-store-demo/modules/shop/e-store-shop-page/e-store-shop-page.module'
+              ).then((m) => m.EStoreShopPageModule),
           },
           {
-            path:'shop/:productId',
+            path: 'shop/:productId',
             loadChildren: () =>
-            import('./app-demo/e-store-demo/modules/shop/e-store-product-details-page/e-store-product-details-page.module').then(
-              (m) => m.EStoreProductDetailsPageModule
-            ),
+              import(
+                './app-demo/e-store-demo/modules/shop/e-store-product-details-page/e-store-product-details-page.module'
+              ).then((m) => m.EStoreProductDetailsPageModule),
           },
           {
-            path:'cart',
+            path: 'cart',
             loadChildren: () =>
-            import('./app-demo/e-store-demo/modules/cart/e-store-cart-page/e-store-cart-page.module').then(
-              (m) => m.EStoreCartPageModule
-            ),
+              import(
+                './app-demo/e-store-demo/modules/cart/e-store-cart-page/e-store-cart-page.module'
+              ).then((m) => m.EStoreCartPageModule),
           },
           {
-            path:'',
+            path: 'userList',
             loadChildren: () =>
-            import('./app-demo/e-store-demo/modules/dashboards/e-store-home-page/e-store-home-page.module').then(
-              (m) => m.EStoreHomePageModule
-            ),
-          }
-        ]
+              import(
+                './app-demo/e-store-demo/modules/users/e-store-user-list/e-store-user-list.module'
+              ).then((m) => m.EStoreUserListModule),
+          },
+
+          {
+            path: '',
+            loadChildren: () =>
+              import(
+                './app-demo/e-store-demo/modules/dashboards/e-store-home-page/e-store-home-page.module'
+              ).then((m) => m.EStoreHomePageModule),
+          },
+        ],
       },
       {
         component: MyHomePageComponent,

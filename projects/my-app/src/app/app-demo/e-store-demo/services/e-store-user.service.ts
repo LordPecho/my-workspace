@@ -12,33 +12,30 @@ import { environment } from 'projects/my-app/src/enviroments/environment';
 import { EStoreUser, IEStoreUser } from '../models/e-store-user.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EStoreUserService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(
-    private httpClient: HttpClient,
-  ) { }
-
-    //GET ALL
-    public getUserts(): Observable<IEStoreUser[]> {
-      return this.httpClient
-        .get<IEStoreUser[]>(environment.eStoreDemo.apiUrl + 'users')
-        .pipe(
-          map((data: IEStoreUser[]) => {
-            const sanitizedData: IEStoreUser[] = [];
-            data.forEach((item: IEStoreUser) => {
-              sanitizedData.push(new EStoreUser(item));
-            });
-            return sanitizedData;
-          })
-        );
-    }
-
-    // GET USER BY ID
-    public getUsert(userId: string): Observable<IEStoreUser> {
-      return this.httpClient.get<IEStoreUser>(
-        environment.eStoreDemo.apiUrl + 'users' + '/' + userId
+  //GET ALL
+  public getUsers(): Observable<IEStoreUser[]> {
+    return this.httpClient
+      .get<IEStoreUser[]>(environment.eStoreDemo.apiUrl + '/users')
+      .pipe(
+        map((data: IEStoreUser[]) => {
+          const sanitizedData: IEStoreUser[] = [];
+          data.forEach((item: IEStoreUser) => {
+            sanitizedData.push(new EStoreUser(item));
+          });
+          return sanitizedData;
+        })
       );
-    }
+  }
+
+  // GET USER BY ID
+  public getUser(userId: string): Observable<IEStoreUser> {
+    return this.httpClient.get<IEStoreUser>(
+      environment.eStoreDemo.apiUrl + '/users' + '/' + userId
+    );
+  }
 }

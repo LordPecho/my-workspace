@@ -14,6 +14,9 @@ import { TranslateModule } from '@ngx-translate/core';
 // MODULE
 import { EStoreShopProductCdkModule } from '../e-store-shop-product-cdk/e-store-shop-product-cdk.module';
 import { CartButtonModule } from '../../cart/cart-button/cart-button.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 // MATERIAL
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,6 +33,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     MatSelectModule,
     CartButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
     EStoreShopPageRoutingModule,
   ],
 })
